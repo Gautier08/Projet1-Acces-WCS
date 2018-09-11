@@ -2,4 +2,6 @@
 
 ## TEAM
 
-*Fabien
+* Fabien Raymond
+
+* Florentin Coyard
