@@ -1,4 +1,9 @@
 # Projet1-Acces-WCS
 
-#Team
-    - Benoît Niveau
+## TEAM
+
+* Fabien Raymond
+
+* Florentin Coyard
+
+* Benoît Niveau
