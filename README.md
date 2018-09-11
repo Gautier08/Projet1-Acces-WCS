@@ -1,3 +1,11 @@
 # Projet1-Acces-WCS
 
-Gautier Simonin
+## TEAM
+
+* Fabien Raymond
+
+* Florentin Coyard
+
+* Benoît Niveau
+
+* Gautier Simonin
