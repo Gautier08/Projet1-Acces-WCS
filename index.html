@@ -1,292 +1,295 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <title>Accès à la Wild Code School</title>
+</head>
 
-
-    <title>Accès à la Wild Code School</title>
-  </head>
-
-  <body>
+<body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
-      <a class="navbar-brand" href="#home"><img src="http://toulouse.aujourdhui.fr/uploads/assets/evenements/recto_fiche/2016/07/708059_journees-portes-ouvertes-wild-code-school-toulouse_195955.png" width="75px" alt="Logo Wild Code School"></a>
-      
-    
-      
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#acces"><i class="fas fa-map-marked-alt fa-5x"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#quartier_libre"><img width="75px" src="data:image/png;base64,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" alt="logo accès" /></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#useful"><i class="fas fa-utensils fa-5x"></i></a>
-          </li>
-        </ul>
-        
-     
+      <a class="navbar-brand" href="#home"><img src="http://toulouse.aujourdhui.fr/uploads/assets/evenements/recto_fiche/2016/07/708059_journees-portes-ouvertes-wild-code-school-toulouse_195955.png"
+          width="75px" alt="Logo Wild Code School"></a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#acces"><i class="fas fa-map-marked-alt fa-5x"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#quartier_libre"><img width="75px" src="data:image/png;base64,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"
+              alt="logo accès" /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#useful"><i class="fas fa-utensils fa-5x"></i></a>
+        </li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<div class="container-fluid">
-<!--  ---------------------------------------SECTION ACCUEIL ------------------------------------------- -->
-<section id="home" class="row bg-light py-3 mt-5">
-
-
-  <div class="jumbotron col-10 offset-1 px-5 bg-transparent">
-    <h1 class="display-4 text-right">Venez nous voir !</h1>
-    
-    <p>Les Wild Breakfasts sont des petits-déjeuners gratuits d’information.<br />
-        Ils sont organisés dans tous nos campus.<br />
-        Tu peux rencontrer l’équipe et les élèves et échanger autour de ton projet de formation. La participation à l’un des Wild Breakfast est indispensable pour ta candidature à notre formation développeur web ou mobile.</p>
-
-      <p>Vivamus malesuada ante egestas purus efficitur, malesuada placerat quam ullamcorper. Ut mauris tortor, lobortis congue risus sed, ornare rhoncus ipsum. Suspendisse eleifend commodo pretium. Donec diam neque, feugiat quis tortor finibus, tempus cursus ipsum. Cras consequat id lacus sit amet suscipit. Curabitur non dolor ut nulla fringilla malesuada ut non risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra nisi vel risus sodales ultricies.</p>
-    <a class="btn btn-primary btn-lg float-right" target="_blank" href="http://wildcodeschool-2902314.hs-sites.com/wild-breakfast?__hstc=83542985.cd087d4471f4dcea096ae74d7fbabf4d.1536153181958.1536679825651.1536743674478.4&__hssc=83542985.1.1536743674478&__hsfp=2520156938" role="button">PARTICIPER A UN WILD BREAKFAST</a>
-  </div>
-</section>
-<!--  ---------------------------------------SECTION TRANSPORTS ------------------------------------------- -->
-
-<section class="py-3">
-    <div class="row">
-      <div class="col-3 offset-1"><br>
+  <div class="container-fluid">
+    <!--  ---------------------------------------SECTION ACCUEIL ------------------------------------------- -->
+    <section id="home" class="row bg-light py-3 mt-5">
+      <div class="jumbotron col-10 offset-1 px-5 bg-transparent">
+        <h1 class="display-4 text-right">Venez nous voir !</h1>
+        <p>Les Wild Breakfasts sont des petits-déjeuners gratuits d’information.<br /> Ils sont organisés dans tous nos campus.<br
+          /> Tu peux rencontrer l’équipe et les élèves et échanger autour de ton projet de formation. La participation à
+          l’un des Wild Breakfast est indispensable pour ta candidature à notre formation développeur web ou mobile.</p>
+        <p>Vivamus malesuada ante egestas purus efficitur, malesuada placerat quam ullamcorper. Ut mauris tortor, lobortis
+          congue risus sed, ornare rhoncus ipsum. Suspendisse eleifend commodo pretium. Donec diam neque, feugiat quis tortor
+          finibus, tempus cursus ipsum. Cras consequat id lacus sit amet suscipit. Curabitur non dolor ut nulla fringilla
+          malesuada ut non risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra nisi vel risus sodales
+          ultricies.
+        </p>
+        <a class="btn btn-primary btn-lg float-right" target="_blank" href="http://wildcodeschool-2902314.hs-sites.com/wild-breakfast?__hstc=83542985.cd087d4471f4dcea096ae74d7fbabf4d.1536153181958.1536679825651.1536743674478.4&__hssc=83542985.1.1536743674478&__hsfp=2520156938"
+          role="button">PARTICIPER A UN WILD BREAKFAST</a>
+      </div>
+    </section>
+    <!--  ---------------------------------------SECTION TRANSPORTS ------------------------------------------- -->
+    <section id="transport" class="py-3">
+      <div class="row">
+        <div class="col-3 offset-1">
           <img src="images/map-marked-alt-solid.svg" alt="transport_map" width=100% class="rounded-circle border border-dark">
-      </div>
-      <div class="col-4"><br>
-        <div class="bus_card">
-            <h3><i class="fas fa-bus fa-2x pr-4"></i>BUS</h3>
-            <div class="bus_card_body"><br>
-              <ul>
-                  <li>Ligne 3</li>
-                  <li>Ligne 4</li>
-                  <li>Ligne 9</li>
-              </ul> 
-              <h3>Arrêt Roederer</h3>
-            </div>
-          </div>
-      </div>
-      <div class="col-3"><br>
-          <div class="train_card">
-              <h3><i class="fas fa-train fa-2x pr-4"></i>TRAM</h3>
-              <div class="train_card_body"><br>
-                <ul>
-                    <li>Ligne A</li>
-                    <li>Ligne B</li>
-                    <li>vide</li>
-                </ul>
-                <h3>Arrêt Gare centre</h3>
-                <a href="https://www.google.fr/maps/place/Gare+de+Reims/@49.2590479,4.0236721,17z/data=!4m5!3m4!1s0x47e97500a5a49aa5:0x58c51faedb3e2a39!8m2!3d49.2589884!4d4.024407" class="btn btn-secondary btn-lg">VOIR SUR GOOGLE MAP</a>
-              </div>
-      </div>
-    <div>
-  </section>
+        </div>
+        <div class="col-4">
 
-<!--------------------------------------------SECTION QUARTIER------------------------------------------------->
+          <h3><i class="fas fa-bus fa-2x pr-4"></i>BUS</h3>
 
-  <section class="py-3  bg-secondary row p-3 mb-2 text-light">
-      <div class = "col-7 offset-1">  
-        <h1 class ="titre" >Quartier Libre</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <ul>
+            <li>Ligne 3</li>
+            <li>Ligne 4</li>
+            <li>Ligne 9</li>
+          </ul>
+          <h3>Arrêt Roederer</h3>
+
+
+        </div>
+        <div class="col-3">
+
+          <h3><i class="fas fa-train fa-2x pr-4"></i>TRAM</h3>
+
+          <ul>
+            <li>Ligne A</li>
+            <li>Ligne B</li>
+            <li>vide</li>
+          </ul>
+          <h3>Arrêt Gare centre</h3>
+          <a href="https://www.google.fr/maps/place/Gare+de+Reims/@49.2590479,4.0236721,17z/data=!4m5!3m4!1s0x47e97500a5a49aa5:0x58c51faedb3e2a39!8m2!3d49.2589884!4d4.024407"
+            class="btn btn-secondary btn-lg">VOIR SUR GOOGLE MAP</a>
+
+
+          <div>
+    </section>
+    <!--------------------------------------------SECTION QUARTIER------------------------------------------------->
+    <section id="quartier" class="py-3  bg-secondary row p-3 mb-2 text-light">
+      <div class="col-7 offset-1">
+        <h1 class="titre">Quartier Libre</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div class="d-flex">
           <a class="mr-2 text-light" href="https://fr-fr.facebook.com/quartierlibrereims/"><i class="fab fa-facebook-square fa-2x"></i></a>
           <a class="mr-2 text-light" href="https://twitter.com/quartierlibrers?lang=fr"><i class="fab fa-twitter-square fa-2x"></i></a>
-          <a class="ml-auto mr-2 text-light" href="http://www.lunion.fr/90029/article/2018-05-08/reims-le-nouveau-quartier-libre-invite-ses-voisins">Article de l'Union<i class="fas fa-bookmark fa-2x pl-2"></i></a>
-        </div>  
+          <a class="ml-auto mr-2 text-light" href="http://www.lunion.fr/90029/article/2018-05-08/reims-le-nouveau-quartier-libre-invite-ses-voisins">Article
+            de l'Union<i class="fas fa-bookmark fa-2x pl-2"></i></a>
+        </div>
       </div>
-      <div class = "col-3">
+      <div class="col-3">
         <figure>
-            <i class="fas fa-city fa-9x fa-border"></i>
+          <i class="fas fa-city fa-9x fa-border"></i>
         </figure>
       </div>
-  </section>
-
-<!--  ---------------------------------------SECTION USEFUL ------------------------------------------- -->
-
-  
-      <section class="py-3 row useful"><!--debut section useful-->
-        <div class="col-10 offset-1">
-          <h1>Vous avez besoin d'un service ?</h1>
-          <p class="mb-0">Filtrer votre recherche</p>
-          <nav class="bg-white mb-4 navbar navbar-expand-lg navbar-light bg-light filters-buttons">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="mr-2 px-3 text-light btn btn-dark nav-item nav-link active" href="#">Voir Tout <span class="sr-only">(current)</span></a>
-                <a class="mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Trouver à manger</a>
-                <a class="mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Se soigner</a>
-                <a class="mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Dormir</a>
-              </div>
+    </section>
+    <!--  ---------------------------------------SECTION USEFUL ------------------------------------------- -->
+    <section id="useful" class="py-3 row">
+      <!--debut section useful-->
+      <div class="col-10 offset-1">
+        <h1>Vous avez besoin d'un service ?</h1>
+        <p class="mb-0">Filtrer votre recherche</p>
+        <nav class="bg-white mb-4 navbar navbar-expand-lg navbar-light bg-light filters-buttons">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="mr-2 px-3 text-light btn btn-dark nav-item nav-link active" href="#">Voir Tout <span class="sr-only">(current)</span></a>
+              <a class="mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Trouver à manger</a>
+              <a class="mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Se soigner</a>
+              <a class="mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Dormir</a>
             </div>
-          </nav><!--end filters buttons-->
-          <div id="popover-content-mcdo" class="d-none infos">
-            <h2>McDonald's</h2>
-            <h3 class="text-secondary">Fast-food</h3>
-            <div class="d-flex justify-content-end">
-              <a href="#" class="mr-1"><i class="text-dark fab fa-2x fa-facebook-square"></i></a>
-              <a href="#"><i class="text-dark fas fa-2x fa-external-link-square-alt"></i></a>
-            </div>
-            <h5><i class="fas fa-map-marker-alt"></i> Adresse :</h5>
-            <p><a  class="text-secondary" href="#">43192 Rue de Talleyrand, 51100 Reims</a></p>
-            <h5><i class="far fa-clock"></i> Horaires :</h5>
-                <ul class="text-secondary">
-                  <li>mercredi	08:00–00:00</li>
-                  <li>jeudi	08:00–00:00</li>
-                  <li>vendredi	08:00–00:00</li>
-                  <li>samedi	08:00–00:00</li>
-                  <li>dimanche	08:00–00:00</li>
-                  <li>lundi	08:00–00:00</li>
-                  <li>mardi	08:00–00:00</li>
-                </ul>
           </div>
-          <div id="popover-content-burgerking" class="d-none infos">
-              <h2>Burger King</h2>
-              <h3 class="text-secondary">Fast-food</h3>
-              <div class="d-flex justify-content-end">
-                <a href="#" class="mr-1"><i class="text-dark fab fa-2x fa-facebook-square"></i></a>
-                <a href="#"><i class="text-dark fas fa-2x fa-external-link-square-alt"></i></a>
+        </nav>
+        <!--end filters buttons-->
+        <div id="popover-content-mcdo" class="d-none infos">
+          <h2>McDonald's</h2>
+          <h3 class="text-secondary">Fast-food</h3>
+          <div class="d-flex justify-content-end">
+            <a href="#" class="mr-1"><i class="text-dark fab fa-2x fa-facebook-square"></i></a>
+            <a href="#"><i class="text-dark fas fa-2x fa-external-link-square-alt"></i></a>
+          </div>
+          <h5><i class="fas fa-map-marker-alt"></i> Adresse :</h5>
+          <p><a class="text-secondary" href="#">43192 Rue de Talleyrand, 51100 Reims</a></p>
+          <h5><i class="far fa-clock"></i> Horaires :</h5>
+          <ul class="text-secondary">
+            <li>mercredi 08:00–00:00</li>
+            <li>jeudi 08:00–00:00</li>
+            <li>vendredi 08:00–00:00</li>
+            <li>samedi 08:00–00:00</li>
+            <li>dimanche 08:00–00:00</li>
+            <li>lundi 08:00–00:00</li>
+            <li>mardi 08:00–00:00</li>
+          </ul>
+        </div>
+        <div id="popover-content-burgerking" class="d-none infos">
+          <h2>Burger King</h2>
+          <h3 class="text-secondary">Fast-food</h3>
+          <div class="d-flex justify-content-end">
+            <a href="#" class="mr-1"><i class="text-dark fab fa-2x fa-facebook-square"></i></a>
+            <a href="#"><i class="text-dark fas fa-2x fa-external-link-square-alt"></i></a>
+          </div>
+          <h5><i class="fas fa-map-marker-alt"></i> Adresse :</h5>
+          <p class="text-secondary">82 Place Drouet d'Erlon, 51100 Reims</p>
+          <h5><i class="far fa-clock"></i> Horaires :</h5>
+          <ul class="text-secondary">
+            <li>mercredi 11:00–23:00</li>
+            <li>jeudi 11:00–00:00</li>
+            <li>vendredi 11:00–01:00</li>
+            <li>samedi 11:00–01:00</li>
+            <li>dimanche 12:00–23:00</li>
+            <li>lundi 11:00–23:00</li>
+            <li>mardi 11:00–23:00</li>
+          </ul>
+        </div>
+        <div class="row card-deck">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card mb-3 shadow-sm">
+              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+              <div class="card-body p-3">
+                <h5 class="card-title mb-0">McDonald's</h5>
+                <p class="text-secondary card-text">Fast-Food</p>
               </div>
-              <h5><i class="fas fa-map-marker-alt"></i> Adresse :</h5>
-              <p class="text-secondary">82 Place Drouet d'Erlon, 51100 Reims</p>
-              <h5><i class="far fa-clock"></i> Horaires :</h5>
-                  <ul class="text-secondary">
-                    <li>mercredi	11:00–23:00</li>
-                    <li>jeudi	11:00–00:00</li>
-                    <li>vendredi	11:00–01:00</li>
-                    <li>samedi	11:00–01:00</li>
-                    <li>dimanche	12:00–23:00</li>
-                    <li>lundi	11:00–23:00</li>
-                    <li>mardi	11:00–23:00</li>
-                  </ul>
+              <a tabindex="0" id="mcdo" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
+                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
             </div>
-          <div class="row card-deck">
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card mb-3 shadow-sm">
-                  <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-                  <div class="card-body p-3">
-                    <h5 class="card-title mb-0">McDonald's</h5>
-                    <p class="text-secondary card-text">Fast-Food</p>
-                  </div>
-                  <a tabindex="0" id="mcdo" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos" >Plus d'infos</a>
-                </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card mb-3 shadow-sm">
+              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+              <div class="card-body p-3">
+                <h5 class="card-title mb-0">Burger King</h5>
+                <p class="text-secondary card-text">Fast-Food</p>
               </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card mb-3 shadow-sm">
-                  <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-                  <div class="card-body p-3">
-                    <h5 class="card-title mb-0">Burger King</h5>
-                    <p class="text-secondary card-text">Fast-Food</p>
-                  </div>
-                  <a tabindex="0" id="burgerking" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
-                </div>
+              <a tabindex="0" id="burgerking" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
+                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card mb-3 shadow-sm">
+              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+              <div class="card-body p-3">
+                <h5 class="card-title mb-0">McDonald's</h5>
+                <p class="text-secondary card-text">Fast-Food</p>
               </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card mb-3 shadow-sm">
-                  <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-                  <div class="card-body p-3">
-                    <h5 class="card-title mb-0">McDonald's</h5>
-                    <p class="text-secondary card-text">Fast-Food</p>
-                  </div>
-                  <a tabindex="0" id="mcdo" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos" >Plus d'infos</a>
-                </div>
+              <a tabindex="0" id="mcdo" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
+                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card mb-3 shadow-sm">
+              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+              <div class="card-body p-3">
+                <h5 class="card-title mb-0">Burger King</h5>
+                <p class="text-secondary card-text">Fast-Food</p>
               </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card mb-3 shadow-sm">
-                  <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-                  <div class="card-body p-3">
-                    <h5 class="card-title mb-0">Burger King</h5>
-                    <p class="text-secondary card-text">Fast-Food</p>
-                  </div>
-                  <a tabindex="0" id="burgerking" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
-                </div>
+              <a tabindex="0" id="burgerking" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
+                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card mb-3 shadow-sm">
+              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+              <div class="card-body p-3">
+                <h5 class="card-title mb-0">McDonald's</h5>
+                <p class="text-secondary card-text">Fast-Food</p>
               </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card mb-3 shadow-sm">
-                  <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-                  <div class="card-body p-3">
-                    <h5 class="card-title mb-0">McDonald's</h5>
-                    <p class="text-secondary card-text">Fast-Food</p>
-                  </div>
-                  <a tabindex="0" id="mcdo" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos" >Plus d'infos</a>
-                </div>
+              <a tabindex="0" id="mcdo" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
+                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card mb-3 shadow-sm">
+              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+              <div class="card-body p-3">
+                <h5 class="card-title mb-0">Burger King</h5>
+                <p class="text-secondary card-text">Fast-Food</p>
               </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card mb-3 shadow-sm">
-                  <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-                  <div class="card-body p-3">
-                    <h5 class="card-title mb-0">Burger King</h5>
-                    <p class="text-secondary card-text">Fast-Food</p>
-                  </div>
-                  <a tabindex="0" id="burgerking" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
-                </div>
-              </div>
+              <a tabindex="0" id="burgerking" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
+                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
+            </div>
+          </div>
 
-          </div><!--end row-->
-        </div><!--end col-->
-      </section><!--end section useful-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end col-->
+    </section>
+    <!--end section useful-->
+    <!--  ---------------------------------------SECTION MAPS ------------------------------------------- -->
+    <section id="google_maps" class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2604.0344744561457!2d4.020030887652527!3d49.256792480927835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m3!3m2!1d49.256995499999995!2d4.0197144!4m0!5e0!3m2!1sfr!2sfr!4v1536680747278"
+        width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+    <!--  --------------------------------------- FOOTER   ------------------------------------------- -->
+    <footer class="row">
+      <nav class="w-100 bg-warning">
 
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Mentions Légales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> ©Wild Code School</i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class="fab fa-facebook-square fa-lg"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class="fab fa-twitter-square fa-lg"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+          </li>
+        </ul>
 
-<!--  ---------------------------------------SECTION MAPS ------------------------------------------- -->
-
-<section id="google_maps" class="row">
- <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2604.0344744561457!2d4.020030887652527!3d49.256792480927835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m3!3m2!1d49.256995499999995!2d4.0197144!4m0!5e0!3m2!1sfr!2sfr!4v1536680747278" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-</section>
-
-<!--  --------------------------------------- FOOTER   ------------------------------------------- -->
-<footer class="row">
-<nav class="w-100 bg-warning">
-
-  <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">Mentions Légales</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#"> ©Wild Code School</i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#"><i class="fab fa-facebook-square fa-lg"></i></a>
-      </li>
-    <li class="nav-item">
-      <a class="nav-link text-white" href="#"><i class="fab fa-twitter-square fa-lg"></i></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-white" href="#"><i class="fab fa-linkedin fa-lg"></i></a>
-    </li>
-  </ul>
-
-</nav>
-
-
-
-
-</footer>
-
-</div> <!--Fin du container-fluid -->
-
+      </nav>
+    </footer>
+    </div>
+    <!--Fin du container-fluid -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
     <script>
-      $("[data-toggle=popover]").each(function(i, obj) {
+      $("[data-toggle=popover]").each(function (i, obj) {
 
         $(this).popover({
           html: true,
-          content: function() {
+          content: function () {
             var id = $(this).attr('id')
             return $('#popover-content-' + id).html();
           }
@@ -294,6 +297,6 @@
 
       });
     </script>
-  </body>
-</html>
+</body>
 
+</html>
