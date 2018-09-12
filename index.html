@@ -7,25 +7,27 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 
     <title>Accès à la Wild Code School</title>
   </head>
   <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning w-25 fixed-top">
       <a class="navbar-brand" href="#home">Logo WCS</a>
       
     
       
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#acces">Accès <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="#acces"><i class="fas fa-map-marked-alt fa-5x"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#quartier_libre">Quartier Libre</a>
+            <a class="nav-link" href="#quartier_libre"><img class="w-100" src="data:image/png;base64,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" alt="logo accès" /></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#useful">Utile</a>
+            <a class="nav-link" href="#useful"><i class="fas fa-utensils fa-5x"></i></a>
           </li>
         </ul>
         
@@ -41,10 +43,12 @@
   <div class="jumbotron col-10 offset-1 px-5">
     <h1 class="display-4 text-right">Venez nous voir !</h1>
     
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eleifend eget elit commodo blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam enim magna, tincidunt vel scelerisque at, semper id lectus. Donec ultricies urna id ante pulvinar tempor. Aenean mattis elit lectus, non tempor tellus viverra vel. Sed suscipit, est venenatis cursus laoreet, augue dolor laoreet orci, nec aliquam tortor risus vel leo. Mauris pretium nisl at lacinia sodales. Aliquam dignissim rhoncus massa. Nam vitae quam placerat, aliquam leo sed, vulputate magna. Proin eu metus ultricies, interdum diam consequat, facilisis orci.</p>
+    <p>Les Wild Breakfasts sont des petits-déjeuners gratuits d’information.<br />
+        Ils sont organisés dans tous nos campus.<br />
+        Tu peux rencontrer l’équipe et les élèves et échanger autour de ton projet de formation. La participation à l’un des Wild Breakfast est indispensable pour ta candidature à notre formation développeur web ou mobile.</p>
 
       <p>Vivamus malesuada ante egestas purus efficitur, malesuada placerat quam ullamcorper. Ut mauris tortor, lobortis congue risus sed, ornare rhoncus ipsum. Suspendisse eleifend commodo pretium. Donec diam neque, feugiat quis tortor finibus, tempus cursus ipsum. Cras consequat id lacus sit amet suscipit. Curabitur non dolor ut nulla fringilla malesuada ut non risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra nisi vel risus sodales ultricies.</p>
-    <a class="btn btn-primary btn-lg float-right" href="#" role="button">PARTICIPER A UN WILD BREAKFAST</a>
+    <a class="btn btn-primary btn-lg float-right" target="_blank" href="http://wildcodeschool-2902314.hs-sites.com/wild-breakfast?__hstc=83542985.cd087d4471f4dcea096ae74d7fbabf4d.1536153181958.1536679825651.1536743674478.4&__hssc=83542985.1.1536743674478&__hsfp=2520156938" role="button">PARTICIPER A UN WILD BREAKFAST</a>
   </div>
 </section>
 
@@ -67,16 +71,13 @@
 
   <ul class="nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Active</a>
+      <a class="nav-link" href="#"><i class="fab fa-facebook-square fa-lg"></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#"><i class="fab fa-twitter-square fa-lg"></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
+      <a class="nav-link" href="#"><i class="fab fa-linkedin fa-lg"></i></a>
     </li>
   </ul>
 
