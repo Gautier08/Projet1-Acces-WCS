@@ -10,49 +10,106 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
-  
-    <section class="useful">
-      <h1>Vous avez besoin d'un service ?</h1>
-      <div class="btn-group" role="group" aria-label="Button Filter">
-          <button type="button" class="btn btn-secondary">Voir Tout</button>
-          <button type="button" class="btn btn-secondary">Manger</button>
-          <button type="button" class="btn btn-secondary">Se soigner</button>
-          <button type="button" class="btn btn-secondary">Dormir</button>
-      </div>
-
-      <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-          <div class="card-body">
-            <h5 class="card-title">Restaurant 1</h5>
-            <p class="card-text">Il est 18h, j'ai trop envie d'une pizza !!!</p>
+  <body class="container-fluid">
+    <div class="row">
+    <div class="col-10 offset-1">
+      <section class="useful"><!--debut section useful-->
+        <h1>Vous avez besoin d'un service ?</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light filters-buttons">
+          <a class="navbar-brand" href="#">Filtrer</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="#">Voir Tout <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="#">Trouver à manger</a>
+              <a class="nav-item nav-link" href="#">Se soigner</a>
+              <a class="nav-item nav-link" href="#">Dormir</a>
+            </div>
           </div>
+        </nav><!--end filters buttons-->
+        <div id="popover-content-mcdo" class="hide infos">
+          <h2>McDonald's</h2>
+          <h3>Fast-food</h3>
+          <h5>Adresse :</h5>
+          <p>43192 Rue de Talleyrand, 51100 Reims</p>
+          <h5>Horaires :</h5>
+              <ul>
+                <li>mercredi	08:00–00:00</li>
+                <li>jeudi	08:00–00:00</li>
+                <li>vendredi	08:00–00:00</li>
+                <li>samedi	08:00–00:00</li>
+                <li>dimanche	08:00–00:00</li>
+                <li>lundi	08:00–00:00</li>
+                <li>mardi	08:00–00:00</li>
+              </ul>
         </div>
-        <div class="card">
-            <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-            <div class="card-body">
-              <h5 class="card-title">Pizza 1</h5>
-              <p class="card-text">Il est 18h, j'ai trop envie d'une pizza !!!</p>
+        <div class="row card-deck">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card">
+                <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+                <div class="card-body">
+                  <h5 class="card-title">McDonald's</h5>
+                  <p class="card-text">Hummmm un burger</p>
+                </div>
+                <a tabindex="0" id="mcdo" class="btn btn-lg btn-danger" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos" data-content="And here's some amazing content. It's very engaging. Right?">Plus d'infos</a>
+              </div>
             </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-            <div class="card-body">
-              <h5 class="card-title">Pharmacie 1</h5>
-              <p class="card-text">Il est 18h, j'ai trop envie d'une pizza !!!</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card">
+                <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+                <div class="card-body">
+                  <h5 class="card-title">Restaurant 1</h5>
+                  <p class="card-text">Il est 18h, j'ai trop envie d'une pizza !!!</p>
+                </div>
+                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos" data-content="And here's some amazing content. It's very engaging. Right?">Plus d'infos</a>
+              </div>
             </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-            <div class="card-body">
-              <h5 class="card-title">Kebab 1</h5>
-              <p class="card-text">Il est 18h, j'ai trop envie d'une pizza !!!</p>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card">
+                <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+                <div class="card-body">
+                  <h5 class="card-title">Restaurant 1</h5>
+                  <p class="card-text">Il est 18h, j'ai trop envie d'une pizza !!!</p>
+                </div>
+                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos" data-content="And here's some amazing content. It's very engaging. Right?">Plus d'infos</a>
+              </div>
             </div>
-        </div>
-      </div>
-    </section>
-      
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card">
+                <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+                <div class="card-body">
+                  <h5 class="card-title">Restaurant 1</h5>
+                  <p class="card-text">Il est 18h, j'ai trop envie d'une pizza !!!</p>
+                </div>
+                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos" data-content="And here's some amazing content. It's very engaging. Right?">Plus d'infos</a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card">
+                <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+                <div class="card-body">
+                  <h5 class="card-title">Restaurant 1</h5>
+                  <p class="card-text">Il est 18h, j'ai trop envie d'une pizza !!!</p>
+                </div>
+                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos" data-content="And here's some amazing content. It's very engaging. Right?">Plus d'infos</a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card">
+                <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
+                <div class="card-body">
+                  <h5 class="card-title">Restaurant 1</h5>
+                  <p class="card-text">Il est 18h, j'ai trop envie d'une pizza !!!</p>
+                </div>
+                <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-html="true" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos" data-content="And here's some amazing content. It's very engaging. Right?">Plus d'infos</a>
+              </div>
+            </div>            
+        </div><!--end row-->
+      </section><!--end section useful-->
+    </div><!--end col-->
+  </div><!--end row-->     
 
 
 
@@ -69,6 +126,19 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+      $("[data-toggle=popover]").each(function(i, obj) {
+
+        $(this).popover({
+          html: true,
+          content: function() {
+            var id = $(this).attr('id')
+            return $('#popover-content-' + id).html();
+          }
+        });
+
+      });
+    </script>
   </body>
 </html>
 
