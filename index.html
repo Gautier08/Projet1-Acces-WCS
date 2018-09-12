@@ -12,20 +12,20 @@
   </head>
   <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-      <a class="navbar-brand" href="#">Logo WCS</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+      <a class="navbar-brand" href="#home">Logo WCS</a>
       
     
       
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Accès <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#acces">Accès <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Quartier Libre</a>
+            <a class="nav-link" href="#quartier_libre">Quartier Libre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Utile</a>
+            <a class="nav-link" href="#useful">Utile</a>
           </li>
         </ul>
         
@@ -35,14 +35,16 @@
 
 <div class="container-fluid">
 <!--  ---------------------------------------SECTION ACCUEIL ------------------------------------------- -->
-<section id="accueil" class="row">
-  <div class="jumbotron col-10 offset-1">
+<section id="home" class="row">
+
+
+  <div class="jumbotron col-10 offset-1 px-5">
     <h1 class="display-4 text-right">Venez nous voir !</h1>
     
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eleifend eget elit commodo blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam enim magna, tincidunt vel scelerisque at, semper id lectus. Donec ultricies urna id ante pulvinar tempor. Aenean mattis elit lectus, non tempor tellus viverra vel. Sed suscipit, est venenatis cursus laoreet, augue dolor laoreet orci, nec aliquam tortor risus vel leo. Mauris pretium nisl at lacinia sodales. Aliquam dignissim rhoncus massa. Nam vitae quam placerat, aliquam leo sed, vulputate magna. Proin eu metus ultricies, interdum diam consequat, facilisis orci.</p>
 
       <p>Vivamus malesuada ante egestas purus efficitur, malesuada placerat quam ullamcorper. Ut mauris tortor, lobortis congue risus sed, ornare rhoncus ipsum. Suspendisse eleifend commodo pretium. Donec diam neque, feugiat quis tortor finibus, tempus cursus ipsum. Cras consequat id lacus sit amet suscipit. Curabitur non dolor ut nulla fringilla malesuada ut non risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pharetra nisi vel risus sodales ultricies.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">PARTICIPER A UN WILD BREAKFIST</a>
+    <a class="btn btn-primary btn-lg float-right" href="#" role="button">PARTICIPER A UN WILD BREAKFAST</a>
   </div>
 </section>
 
@@ -55,13 +57,13 @@
 
 <!--  ---------------------------------------SECTION MAPS ------------------------------------------- -->
 
-<section id="google_maps">
+<section id="google_maps" class="row">
  <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2604.0344744561457!2d4.020030887652527!3d49.256792480927835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m3!3m2!1d49.256995499999995!2d4.0197144!4m0!5e0!3m2!1sfr!2sfr!4v1536680747278" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 </section>
 
 <!--  --------------------------------------- FOOTER   ------------------------------------------- -->
-<footer>
-<nav class="bg-warning">
+<footer class="row">
+<nav class="w-100 bg-warning">
 
   <ul class="nav justify-content-center">
     <li class="nav-item">
@@ -79,6 +81,8 @@
   </ul>
 
 </nav>
+
+
 
 
 </footer>
