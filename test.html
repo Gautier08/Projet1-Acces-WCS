@@ -1,0 +1,90 @@
+<head>
+      <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+  crossorigin="anonymous">
+</head>
+<div id="card"></div>
+<script>
+
+    const data = {
+        hotels: [
+            {
+                name: "Ibis Centre",
+                id: "ibis",
+                adress: "28 Boulevard Joffre, 51100 Reims",
+                phone: "03 26 40 03 24",
+                price: "€€€",
+                schedule: "Toujours ouvert",
+                img: "images/img-hotel.jpg",
+                facebook:"https://www.facebook.com/ibisReimsCentreGare/",
+                website:"https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml"
+            },
+            {
+                name: "B&B",
+                id: "bandb",
+                adress: "4 Rue André Pingat, 51100 Reims",
+                phone: "0 892 70 52 20",
+                price: "€€",
+                schedule: "Toujours ouvert",
+                img: "images/img-hotel.jpg"
+            }
+        ]
+    }
+
+    for (let i = 0; i < data.hotels.length; i++){
+        //Create Container
+        let popoverContent = document.createElement('div');
+        let id = "popover-content-" + data.hotels[i].id;
+        popoverContent.setAttribute("id", id);
+        //Create H2
+        let title = document.createElement('h2');
+        title.innerHTML = data.hotels[i].name;
+        popoverContent.appendChild(title);
+        //Create H3
+        let type = document.createElement('h3');
+        type.innerHTML = "Hôtel";
+        type.setAttribute = "text-secondary";
+        popoverContent.appendChild(type);
+        //Create Social
+        if (data.hotels[i].facebook || data.hotels[i].website){
+            let social = document.createElement('div');
+            social.setAttribute("class", "d-flex justify-content-end");
+            if (data.hotels[i].facebook){
+                let facebookLink = document.createElement('a');
+                facebookLink.innerHTML='<i class="text-dark fab fa-2x fa-facebook-square"></i>';
+                facebookLink.setAttribute = ("href", "https://www.facebook.com/ibisReimsCentreGare/");
+                social.appendChild(facebookLink);
+            }
+            if (data.hotels[i].website){
+                let websiteLink = document.createElement('a');
+                websiteLink.innerHTML='<i class="text-dark fas fa-2x fa-external-link-square-alt"></i>';
+                websiteLink.setAttribute = ("href", "https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml");
+                social.appendChild(websiteLink);
+            }
+            popoverContent.appendChild(social);
+        }
+
+        popoverContent.appendChild(type);
+        //Create Adress
+        let adressTitle = document.createElement('h5');
+        adressTitle.innerHTML='<i class="fas fa-map-marker-alt"></i> Adresse :';
+        popoverContent.appendChild(adressTitle); 
+        let adressContent = document.createElement('p');
+        adressContent.innerHTML = data.hotels[i].adress
+        adressContent.setAttribute = "text-secondary";
+        popoverContent.appendChild(adressContent);
+        //Create Horaires
+        let scheduleTitle = document.createElement('h5');
+        scheduleTitle.innerHTML='<i class="far fa-clock"></i> Horaires :';
+        popoverContent.appendChild(scheduleTitle); 
+        let scheduleContent = document.createElement('p');
+        scheduleContent.innerHTML = data.hotels[i].schedule
+        popoverContent.appendChild(scheduleContent);            
+        let element = document.getElementById("card");
+        element.appendChild(popoverContent);
+
+
+    }      
+</script>
