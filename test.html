@@ -1,117 +1,119 @@
 <head>
-      <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-  crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-  crossorigin="anonymous">
-</head>
-<div id="card"></div>
-<script>
-
-    const data = {
-        hotels: [
-            {
-                name: "Ibis Centre",
-                id: "ibis",
-                adress: "28 Boulevard Joffre, 51100 Reims",
-                phone: "03 26 40 03 24",
-                price: "€€€",
-                schedule: ["Toujours ouvert"],
-                img: "images/img-hotel.jpg",
-                facebook:"https://www.facebook.com/ibisReimsCentreGare/",
-                website:"https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml"
-            },
-            {
-                name: "B&B",
-                id: "bandb",
-                adress: "4 Rue André Pingat, 51100 Reims",
-                phone: "0 892 70 52 20",
-                price: "€€",
-                schedule: ["Toujours ouvert"],
-                img: "images/img-hotel.jpg"
-            },
-            
-        ],
-        restaurant: [
-            {
-                name: "Burger King",
-                id: "burgerking",
-                adress: "82 Place Drouet d'Erlon, 51100 Reims",
-                schedule:  ["mercredi 11:00–23:00", "jeudi 11:00–00:00","vendredi 11:00–01:00", "samedi 11:00–01:00", "dimanche 12:00–23:00","lundi 11:00–23:00", "mardi 11:00–23:00"],
-                img: "images/img-hotel.jpg",
-                facebook:"https://www.facebook.com/ibisReimsCentreGare/",
-                website:"https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml"
-            }    
-        ]
-    }
-
-    for (let i = 0; i < data.hotels.length; i++){
-        //Create Container
-        let popoverContent = document.createElement('div');
-        let id = "popover-content-" + data.hotels[i].id;
-        popoverContent.setAttribute("id", id);
-        //Create H2
-        let title = document.createElement('h2');
-        title.innerHTML = data.hotels[i].name;
-        popoverContent.appendChild(title);
-        //Create H3
-        let type = document.createElement('h3');
-        type.innerHTML = "Hôtel";
-        type.setAttribute = "text-secondary";
-        popoverContent.appendChild(type);
-        //Create Social
-        if (data.hotels[i].facebook || data.hotels[i].website){
-            let social = document.createElement('div');
-            social.setAttribute("class", "d-flex justify-content-end");
-            if (data.hotels[i].facebook){
-                let facebookLink = document.createElement('a');
-                facebookLink.innerHTML='<i class="text-dark fab fa-2x fa-facebook-square"></i>';
-                facebookLink.setAttribute = ("href", "https://www.facebook.com/ibisReimsCentreGare/");
-                social.appendChild(facebookLink);
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  </head>
+  <div id="card"></div>
+  <script>
+  
+      const data = {
+          hotels: [
+              {
+                  name: "Ibis Centre",
+                  id: "ibis",
+                  adress: "28 Boulevard Joffre, 51100 Reims",
+                  phone: "03 26 40 03 24",
+                  price: "€€€",
+                  schedule: ["Toujours ouvert"],
+                  img: "images/img-hotel.jpg",
+                  facebook:"https://www.facebook.com/ibisReimsCentreGare/",
+                  website:"https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml"
+              },
+              {
+                  name: "B&B",
+                  id: "bandb",
+                  adress: "4 Rue André Pingat, 51100 Reims",
+                  phone: "0 892 70 52 20",
+                  price: "€€",
+                  schedule: ["Toujours ouvert"],
+                  img: "images/img-hotel.jpg"
+              },
+              
+          ],
+          restaurants: [
+              {
+                  name: "Burger King",
+                  id: "burgerking",
+                  adress: "82 Place Drouet d'Erlon, 51100 Reims",
+                  schedule:  ["mercredi 11:00–23:00", "jeudi 11:00–00:00","vendredi 11:00–01:00", "samedi 11:00–01:00", "dimanche 12:00–23:00","lundi 11:00–23:00", "mardi 11:00–23:00"],
+                  img: "images/img-hotel.jpg",
+                  facebook:"https://www.facebook.com/ibisReimsCentreGare/",
+                  website:"https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml"
+              }    
+          ]
+      }
+      for (let k = 0; k < Object.keys(data).length; k++){
+        for (let i = 0; i < Object.values(data)[k].length; i++){
+            console.log(Object.values(data)[k][i].name)
+            //Create Container
+            let popoverContent = document.createElement('div');
+            let id = "popover-content-" + Object.values(data)[k][i].id;
+            popoverContent.setAttribute("id", id);
+            //Create H2
+            let title = document.createElement('h2');
+            title.innerHTML = Object.values(data)[k][i].name;
+            popoverContent.appendChild(title);
+            //Create H3
+            let type = document.createElement('h3');
+            type.innerHTML = "Hôtel";
+            type.setAttribute("class","text-secondary");
+            popoverContent.appendChild(type);
+            //Create Social
+            if (Object.values(data)[k][i].facebook || Object.values(data)[k][i].website){
+                let social = document.createElement('div');
+                social.setAttribute("class", "d-flex justify-content-end");
+                if (Object.values(data)[k][i].facebook){
+                    let facebookLink = document.createElement('a');
+                    facebookLink.innerHTML='<i class="text-dark fab fa-2x fa-facebook-square"></i>';
+                    facebookLink.setAttribute("href", Object.values(data)[k][i].facebook);
+                    social.appendChild(facebookLink);
+                }
+                if (Object.values(data)[k][i].website){
+                    let websiteLink = document.createElement('a');
+                    websiteLink.innerHTML='<i class="text-dark fas fa-2x fa-external-link-square-alt"></i>';
+                    websiteLink.setAttribute("href", Object.values(data)[k][i].website);
+                    social.appendChild(websiteLink);
+                }
+                popoverContent.appendChild(social);
             }
-            if (data.hotels[i].website){
-                let websiteLink = document.createElement('a');
-                websiteLink.innerHTML='<i class="text-dark fas fa-2x fa-external-link-square-alt"></i>';
-                websiteLink.setAttribute = ("href", "https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml");
-                social.appendChild(websiteLink);
+            //Create Adress
+            let adressTitle = document.createElement('h5');
+            adressTitle.innerHTML='<i class="fas fa-map-marker-alt"></i> Adresse :';
+            popoverContent.appendChild(adressTitle); 
+            let adressContent = document.createElement('p');
+            adressContent.innerHTML = Object.values(data)[k][i].adress
+            adressContent.setAttribute("class","text-secondary");
+            popoverContent.appendChild(adressContent);
+    
+            //Create Phone
+            if (Object.values(data)[k][i].phone){
+                let phone = document.createElement('h5');
+                phone.innerHTML='<i class="fas fa-phone-square"></i> ';
+                let phoneContent = document.createElement('span');
+                phoneContent.innerHTML = Object.values(data)[k][i].phone;
+                phoneContent.setAttribute("class","text-secondary");
+                phone.appendChild(phoneContent);
+                popoverContent.appendChild(phone);
             }
-            popoverContent.appendChild(social);
-        }
-        //Create Adress
-        let adressTitle = document.createElement('h5');
-        adressTitle.innerHTML='<i class="fas fa-map-marker-alt"></i> Adresse :';
-        popoverContent.appendChild(adressTitle); 
-        let adressContent = document.createElement('p');
-        adressContent.innerHTML = data.hotels[i].adress
-        adressContent.setAttribute = "text-secondary";
-        popoverContent.appendChild(adressContent);
-
-         //Create Phone
-         if (data.hotels[i].phone){
-            let phone = document.createElement('h5');
-            phone.innerHTML='<i class="fas fa-phone-square"></i> ';
-            let phoneContent = document.createElement('span');
-            phoneContent.innerHTML = data.hotels[i].phone;
-            phoneContent.setAttribute = "text-secondary";
-            phone.appendChild(phoneContent);
-            popoverContent.appendChild(phone);
-        }
-
-        //Create Horaires
-        let scheduleTitle = document.createElement('h5');
-        scheduleTitle.innerHTML='<i class="far fa-clock"></i> Horaires :';
-        popoverContent.appendChild(scheduleTitle); 
-        let scheduleContent = document.createElement('ul');
-        scheduleContent.setAttribute = "text-secondary";
-        for (let j = 0; j < data.hotels[i].schedule.length; j++){
-            let scheduleContentLi = document.createElement('li');
-            scheduleContentLi.innerHTML = data.hotels[i].schedule[j];
-            scheduleContent.appendChild(scheduleContentLi);
-        }
-        popoverContent.appendChild(scheduleContent);            
-        let element = document.getElementById("card");
-        element.appendChild(popoverContent);
-
-
-    }      
-</script>
+    
+            //Create Horaires
+            let scheduleTitle = document.createElement('h5');
+            scheduleTitle.innerHTML='<i class="far fa-clock"></i> Horaires :';
+            popoverContent.appendChild(scheduleTitle); 
+            let scheduleContent = document.createElement('ul');
+            scheduleContent.setAttribute("class","text-secondary");
+            for (let j = 0; j < Object.values(data)[k][i].schedule.length; j++){
+                let scheduleContentLi = document.createElement('li');
+                scheduleContentLi.innerHTML = Object.values(data)[k][i].schedule[j];
+                scheduleContent.appendChild(scheduleContentLi);
+            }
+            popoverContent.appendChild(scheduleContent);            
+            let element = document.getElementById("card");
+            element.appendChild(popoverContent);
+    
+    
+        }    
+  }  
+  </script>
