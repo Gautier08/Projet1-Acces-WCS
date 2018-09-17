@@ -1,194 +1,283 @@
+<!doctype html>
+<html lang="fr">
+
 <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
 </head>
-<div id="popoversContainer"></div>
-<div id="parent" class="row card-deck"></div>
-<script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"></script>
 
-  const data = {
-    hotels: [
-      {
-        name: "Ibis Centre",
-        id: "ibis",
-        adress: "28 Boulevard Joffre, 51100 Reims",
-        phone: "03 26 40 03 24",
-        price: "€€€",
-        schedule: ["Toujours ouvert"],
-        img: "images/img-hotel.jpg",
-        facebook: "https://www.facebook.com/ibisReimsCentreGare/",
-        website: "https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml"
-      },
-      {
-        name: "B&B",
-        id: "bandb",
-        adress: "4 Rue André Pingat, 51100 Reims",
-        phone: "0 892 70 52 20",
-        price: "€€",
-        schedule: ["Toujours ouvert"],
-        img: "images/img-hotel.jpg"
-      },
+<body>
+  <section id="useful" class="py-3 row">
+    <!--debut section useful-->
+    <div class="col-10 offset-1">
+      <h1>Vous avez besoin d'un service ?</h1>
+      <p class="mb-0">Filtrer votre recherche</p>
+      <nav class="bg-white mb-4 navbar navbar-expand-lg navbar-light bg-light filters-buttons">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <button id="all" class="filter mr-2 px-3 btn btn-light nav-item nav-link active" href="#">Voir Tout <span
+                class="sr-only">(current)</span></button>
+            <button id="restaurants" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Trouver à
+              manger</button>
+            <button id="pharmacie" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Se soigner</button>
+            <button id="hotels" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Dormir</button>
+          </div>
+        </div>
+      </nav>
+      <div id="parent" class="row card-deck"></div>
+    </div>
+  </section>
 
-    ],
-    restaurants: [
-      {
-        name: "Burger King",
-        id: "burgerking",
-        adress: "82 Place Drouet d'Erlon, 51100 Reims",
-        schedule: ["mercredi 11:00–23:00", "jeudi 11:00–00:00", "vendredi 11:00–01:00", "samedi 11:00–01:00", "dimanche 12:00–23:00", "lundi 11:00–23:00", "mardi 11:00–23:00"],
-        img: "images/img-restaurant.jpg",
-        facebook: "https://fr-fr.facebook.com/burgerkingfranceofficiel/",
-        website: "https://restaurants.burgerking.fr/reims-erlon"
-      },
-      {
-        name: "McDonald's",
-        id: "mcdo",
-        adress: "43192 Rue de Talleyrand, 51100 Reims",
-        schedule: ["mercredi 08:00–00:00", "jeudi 08:00–00:00", "vendredi 08:00–00:00", "samedi 08:00–00:00", "dimanche 08:00–00:00", "lundi 08:00–00:00", "mardi 08:00–00:00"],
-        img: "images/img-restaurant.jpg",
-        facebook: "https://www.facebook.com/mcdonaldsreims/",
-        website: "https://www.restaurants.mcdonalds.fr/mcdonalds-reims"
+
+  <script>
+    $(document).ready(function () {
+
+
+      const data = {
+        hotels: [
+          {
+            name: "Ibis Centre",
+            id: "ibis",
+            adress: "28 Boulevard Joffre, 51100 Reims",
+            phone: "03 26 40 03 24",
+            price: "€€€",
+            schedule: ["Toujours ouvert"],
+            img: "images/img-hotel.jpg",
+            facebook: "https://www.facebook.com/ibisReimsCentreGare/",
+            website: "https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml"
+          },
+          {
+            name: "B&B",
+            id: "bandb",
+            adress: "4 Rue André Pingat, 51100 Reims",
+            phone: "0 892 70 52 20",
+            price: "€€",
+            schedule: ["Toujours ouvert"],
+            img: "images/img-hotel.jpg"
+          },
+
+        ],
+        restaurants: [
+          {
+            name: "Burger King",
+            id: "burgerking",
+            adress: `82 Place Drouet d&apos; Erlonn, 51100 Reims`,
+            schedule: ["mercredi 11:00–23:00", "jeudi 11:00–00:00", "vendredi 11:00–01:00", "samedi 11:00–01:00", "dimanche 12:00–23:00", "lundi 11:00–23:00", "mardi 11:00–23:00"],
+            img: "images/img-restaurant.jpg",
+            facebook: "https://fr-fr.facebook.com/burgerkingfranceofficiel/",
+            website: "https://restaurants.burgerking.fr/reims-erlon"
+          },
+          {
+            name: `McDonald's`,
+            id: "mcdo",
+            adress: "43192 Rue de Talleyrand, 51100 Reims",
+            schedule: ["mercredi 08:00–00:00", "jeudi 08:00–00:00", "vendredi 08:00–00:00", "samedi 08:00–00:00", "dimanche 08:00–00:00", "lundi 08:00–00:00", "mardi 08:00–00:00"],
+            img: "images/img-restaurant.jpg",
+            facebook: "https://www.facebook.com/mcdonaldsreims/",
+            website: "https://www.restaurants.mcdonalds.fr/mcdonalds-reims"
+          }
+        ],
+        pharmacie: [
+          {
+            name: "Pharmacie Godfroy",
+            id: "godfroy",
+            adress: "137 Rue de Courcelles, 51100 Reims",
+            schedule: ["Du lundi au vendredi", "09:00-12:15", "14:00-19:00", "Samedi", "09:00–12:15", "14:00–18:00", "Fermé le Dimanche"],
+            img: "images/img-pharmacie.jpg",
+            website: "https://www.pharmacie-godfroy-reims.fr/"
+          }
+        ]
       }
-    ],
-    pharmacie: [
-      {
-        name: "Pharmacie Godfroy",
-        id: "godfroy",
-        adress: "137 Rue de Courcelles, 51100 Reims",
-        schedule: ["Du lundi au vendredi", "09:00-12:15", "14:00-19:00", "Samedi", "09:00–12:15", "14:00–18:00", "Fermé le Dimanche"],
-        img: "images/img-restaurant.jpg",
-        website: "https://www.pharmacie-godfroy-reims.fr/"
-      }
-    ]
-  }
 
-  for (let k = 0; k < Object.keys(data).length; k++) {
-    for (let i = 0; i < Object.values(data)[k].length; i++) {
-    //Create popoverContent
-      //Create Container
-      let popoverContent = document.createElement('div');
-      let id = "popover-content-" + Object.values(data)[k][i].id;
-      popoverContent.setAttribute("id", id);
-      //popoverContent.setAttribute("class", "d-none");
-      //Create H2
-      let title = document.createElement('h2');
-      title.innerHTML = Object.values(data)[k][i].name;
-      popoverContent.appendChild(title);
-      //Create H3
-      let type = document.createElement('h3');
-      type.innerHTML = Object.keys(data)[k][0].toUpperCase() + Object.keys(data)[k].slice(1);
-      type.setAttribute("class", "text-secondary");
-      popoverContent.appendChild(type);
-      //Create Social
-      if (Object.values(data)[k][i].facebook || Object.values(data)[k][i].website) {
-        let social = document.createElement('div');
-        social.setAttribute("class", "d-flex justify-content-end");
-        if (Object.values(data)[k][i].facebook) {
-          let facebookLink = document.createElement('a');
-          facebookLink.innerHTML = '<i class="text-dark fab fa-2x fa-facebook-square"></i>';
-          facebookLink.setAttribute("href", Object.values(data)[k][i].facebook);
-          social.appendChild(facebookLink);
+      for (let k = 0; k < Object.keys(data).length; k++) {
+        for (let i = 0; i < Object.values(data)[k].length; i++) {
+          //Create popoverContent
+          //Create Container
+          let popoverContent = document.createElement('div');
+          let id = "popover-content-" + Object.values(data)[k][i].id;
+          popoverContent.setAttribute("id", id);
+          popoverContent.setAttribute("class", "d-none");
+          //Create H2
+          let title = document.createElement('h2');
+          title.innerHTML = Object.values(data)[k][i].name;
+          popoverContent.appendChild(title);
+          //Create H3
+          let type = document.createElement('h3');
+          type.innerHTML = Object.keys(data)[k][0].toUpperCase() + Object.keys(data)[k].slice(1);
+          type.setAttribute("class", "text-secondary");
+          popoverContent.appendChild(type);
+          //Create Social
+          if (Object.values(data)[k][i].facebook || Object.values(data)[k][i].website) {
+            let social = document.createElement('div');
+            social.setAttribute("class", "d-flex justify-content-end");
+            if (Object.values(data)[k][i].facebook) {
+              let facebookLink = document.createElement('a');
+              facebookLink.innerHTML = '<i class="text-dark fab fa-2x fa-facebook-square"></i>';
+              facebookLink.setAttribute("href", Object.values(data)[k][i].facebook);
+              facebookLink.setAttribute("class", "mr-1");
+              social.appendChild(facebookLink);
+            }
+            if (Object.values(data)[k][i].website) {
+              let websiteLink = document.createElement('a');
+              websiteLink.innerHTML = '<i class="text-dark fas fa-2x fa-external-link-square-alt"></i>';
+              websiteLink.setAttribute("href", Object.values(data)[k][i].website);
+              social.appendChild(websiteLink);
+            }
+            popoverContent.appendChild(social);
+          }
+          //Create Adress
+          let adressTitle = document.createElement('h5');
+          adressTitle.innerHTML = '<i class="fas fa-map-marker-alt"></i> Adresse :';
+          popoverContent.appendChild(adressTitle);
+          let adressContent = document.createElement('p');
+          adressContent.innerHTML = Object.values(data)[k][i].adress
+          adressContent.setAttribute("class", "text-secondary");
+          popoverContent.appendChild(adressContent);
+
+          //Create Phone
+          if (Object.values(data)[k][i].phone) {
+            let phone = document.createElement('h5');
+            phone.innerHTML = '<i class="fas fa-phone-square"></i> ';
+            let phoneContent = document.createElement('span');
+            phoneContent.innerHTML = Object.values(data)[k][i].phone;
+            phoneContent.setAttribute("class", "text-secondary");
+            phone.appendChild(phoneContent);
+            popoverContent.appendChild(phone);
+          }
+
+          //Create Price
+          if (Object.values(data)[k][i].price) {
+            let price = document.createElement('h5');
+            price.innerHTML = '<i class="fas fa-hand-holding-usd"></i> ';
+            let priceContent = document.createElement('span');
+            priceContent.innerHTML = Object.values(data)[k][i].price;
+            priceContent.setAttribute("class", "text-secondary");
+            price.appendChild(priceContent);
+            popoverContent.appendChild(price);
+          }
+
+          //Create Horaires
+          let scheduleTitle = document.createElement('h5');
+          scheduleTitle.innerHTML = '<i class="far fa-clock"></i> Horaires :';
+          popoverContent.appendChild(scheduleTitle);
+          let scheduleContent = document.createElement('ul');
+          scheduleContent.setAttribute("class", "text-secondary");
+          for (let j = 0; j < Object.values(data)[k][i].schedule.length; j++) {
+            let scheduleContentLi = document.createElement('li');
+            scheduleContentLi.innerHTML = Object.values(data)[k][i].schedule[j];
+            scheduleContent.appendChild(scheduleContentLi);
+          }
+          popoverContent.appendChild(scheduleContent);
+          let element = document.getElementById("useful");
+          element.appendChild(popoverContent);
+
+          //Create Cards
+          //Create Container
+          let cardContainer = document.createElement('div');
+          cardContainer.setAttribute("class", Object.keys(data)[k] + " col-12 col-sm-6 col-md-4 col-lg-3");
+          let card = document.createElement('div');
+          card.setAttribute("class", "card mb-3 shadow-sm");
+          cardContainer.appendChild(card);
+
+          //Create IMG
+          let imgCard = document.createElement('img');
+          imgCard.setAttribute("class", "card-img-top");
+          imgCard.setAttribute("src", Object.values(data)[k][i].img);
+          imgCard.setAttribute("alt", Object.values(data)[k][i].name);
+          card.appendChild(imgCard);
+
+          //Create Card Body
+          let cardBody = document.createElement("div");
+          cardBody.setAttribute("class", "card-body p-3")
+          card.appendChild(cardBody);
+          let cardTitle = document.createElement("h5");
+          cardTitle.setAttribute("class", "card-title mb-0");
+          cardTitle.innerHTML = Object.values(data)[k][i].name;
+          let cardType = document.createElement("p");
+          cardType.setAttribute("class", "text-secondary card-text");
+          cardType.innerHTML = Object.keys(data)[k][0].toUpperCase() + Object.keys(data)[k].slice(1);
+          cardBody.appendChild(cardTitle);
+          cardBody.appendChild(cardType);
+
+          //Create Card Button
+          let cardButton = document.createElement("span");
+          /*cardButton.setAttribute("data-toggle", "popover");
+          cardButton.setAttribute("class", "border btn btn-lg mx-3 mb-3 pb-1 btn-light");
+          cardButton.setAttribute("id", Object.values(data)[k][i].id);
+          cardButton.setAttribute("role", "button");
+         
+          cardButton.setAttribute("data-content", "blabla");
+          cardButton.setAttribute("data-placement", "bottom");
+          cardButton.setAttribute("data-trigger", "focus");
+          cardButton.setAttribute("title", "Plus d'infos");
+          cardButton.innerHTML = "Plus d'infos";*/
+          card.appendChild(cardButton);
+          cardButton.innerHTML = `<a tabindex="0" id="${Object.values(data)[k][i].id}" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true"
+                data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>`
+
+          /*console.log($(cardButton))
+          
+            $(cardButton).popover({
+             html: true,
+            content: function () {
+            var id = $(this).attr('id')
+            return $('#popover-content-' + id).html();
+            
+          })*/
+
+          let cardDeck = document.getElementById("parent");
+          cardDeck.appendChild(cardContainer);
         }
-        if (Object.values(data)[k][i].website) {
-          let websiteLink = document.createElement('a');
-          websiteLink.innerHTML = '<i class="text-dark fas fa-2x fa-external-link-square-alt"></i>';
-          websiteLink.setAttribute("href", Object.values(data)[k][i].website);
-          social.appendChild(websiteLink);
-        }
-        popoverContent.appendChild(social);
-      }
-      //Create Adress
-      let adressTitle = document.createElement('h5');
-      adressTitle.innerHTML = '<i class="fas fa-map-marker-alt"></i> Adresse :';
-      popoverContent.appendChild(adressTitle);
-      let adressContent = document.createElement('p');
-      adressContent.innerHTML = Object.values(data)[k][i].adress
-      adressContent.setAttribute("class", "text-secondary");
-      popoverContent.appendChild(adressContent);
-
-      //Create Phone
-      if (Object.values(data)[k][i].phone) {
-        let phone = document.createElement('h5');
-        phone.innerHTML = '<i class="fas fa-phone-square"></i> ';
-        let phoneContent = document.createElement('span');
-        phoneContent.innerHTML = Object.values(data)[k][i].phone;
-        phoneContent.setAttribute("class", "text-secondary");
-        phone.appendChild(phoneContent);
-        popoverContent.appendChild(phone);
       }
 
-      //Create Price
-      if (Object.values(data)[k][i].price) {
-        let price = document.createElement('h5');
-        price.innerHTML = '<i class="fas fa-hand-holding-usd"></i> ';
-        let priceContent = document.createElement('span');
-        priceContent.innerHTML = Object.values(data)[k][i].price;
-        priceContent.setAttribute("class", "text-secondary");
-        price.appendChild(priceContent);
-        popoverContent.appendChild(price);
-      }
+  
+        $("[data-toggle=popover]").each(function (i, obj) {
+          console.log($('#popover-content-' + $(this).attr('id')).html())
+        $(this).popover({
+          html: true,
+          content: function () {
+            var id = $(this).attr('id')
+            return $('#popover-content-' + id).html();
+          }
+        });
 
-      //Create Horaires
-      let scheduleTitle = document.createElement('h5');
-      scheduleTitle.innerHTML = '<i class="far fa-clock"></i> Horaires :';
-      popoverContent.appendChild(scheduleTitle);
-      let scheduleContent = document.createElement('ul');
-      scheduleContent.setAttribute("class", "text-secondary");
-      for (let j = 0; j < Object.values(data)[k][i].schedule.length; j++) {
-        let scheduleContentLi = document.createElement('li');
-        scheduleContentLi.innerHTML = Object.values(data)[k][i].schedule[j];
-        scheduleContent.appendChild(scheduleContentLi);
-      }
-      popoverContent.appendChild(scheduleContent);
-      let element = document.getElementById("popoversContainer");
-      element.appendChild(popoverContent);
-
-    //Create Cards
-      //Create Container
-      let cardContainer = document.createElement('div');
-      cardContainer.setAttribute("class", Object.keys(data)[k] + " col-12 col-sm-6 col-md-4 col-lg-3");
-      let card = document.createElement('div');
-      card.setAttribute("class", "card mb-3 shadow-sm");
-      cardContainer.appendChild(card);
+      });
       
-      //Create IMG
-      let imgCard = document.createElement('img');
-      imgCard.setAttribute("class", "card-img-top");
-      imgCard.setAttribute("src", Object.values(data)[k][i].img);
-      imgCard.setAttribute("alt", Object.values(data)[k][i].name);
-      card.appendChild(imgCard);
 
-      //Create Card Body
-      let cardBody = document.createElement("div");
-      cardBody.setAttribute("class", "card-body p-3")
-      card.appendChild(cardBody);
-      let cardTitle = document.createElement("h5");
-      cardTitle.setAttribute("class", "card-title mb-0");
-      cardTitle.innerHTML = Object.values(data)[k][i].name;
-      let cardType = document.createElement("p");
-      cardType.setAttribute("class", "text-secondary card-text");
-      cardType.innerHTML =  Object.keys(data)[k][0].toUpperCase() + Object.keys(data)[k].slice(1);
-      cardBody.appendChild(cardTitle);
-      cardBody.appendChild(cardType);
 
-      //Create Card Button
-      let cardButton = document.createElement("a");
-      cardButton.setAttribute("class", "border btn btn-lg mx-3 mb-3 pb-1 btn-light");
-      cardButton.setAttribute("id", Object.values(data)[k][i].id);
-      cardButton.setAttribute("role", "button");
-      cardButton.setAttribute("data-html", "true");
-      cardButton.setAttribute("data-placement", "bottom");
-      cardButton.setAttribute("data-toggle", "popover");
-      cardButton.setAttribute("data-trigger", "focus");
-      cardButton.setAttribute("title", "Plus d'infos");
-      cardButton.innerHTML = "Plus d'infos";
-      card.appendChild(cardButton);
 
-      let cardDeck = document.getElementById("parent");
-      cardDeck.appendChild(cardContainer);
-    }
-  }  
-</script>
+
+
+      var $btns = $('.filter').click(function () {
+        if (this.id == 'all') {
+          $('#parent > div').fadeIn(450);
+        } else {
+          var $el = $('.' + this.id).fadeIn(450);
+          $('#parent > div').not($el).hide();
+        }
+        $btns.removeClass('active');
+        $(this).addClass('active');
+      })
+    });
+  </script>
+
+</body>
+
+</html>
