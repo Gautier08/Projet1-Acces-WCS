@@ -18,6 +18,13 @@
   crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
   crossorigin="anonymous"></script>
+<style>
+  img{
+width: 100%;
+    height: 15vw;
+    object-fit: cover;
+  }
+</style>
 
 <body>
   <section id="useful" class="py-3 row">
@@ -32,12 +39,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <button id="all" class="filter mr-2 px-3 btn btn-light nav-item nav-link active" href="#">Voir Tout <span
+            <button id="all" class="filter mr-2 px-3 btn btn-light nav-item nav-link border active" href="#">Voir Tout <span
                 class="sr-only">(current)</span></button>
-            <button id="restaurants" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Trouver à
+            <button id="restaurant" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Trouver à
               manger</button>
             <button id="pharmacie" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Se soigner</button>
-            <button id="hotels" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Dormir</button>
+            <button id="hotel" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Dormir</button>
           </div>
         </div>
       </nav>
@@ -51,57 +58,170 @@
 
 
       const data = {
-        hotels: [
+        hotel: [
           {
             name: "Ibis Centre",
             id: "ibis",
-            adress: "28 Boulevard Joffre, 51100 Reims",
+            adress: "28 Boulevard Joffre, Reims",
             phone: "03 26 40 03 24",
             price: "€€€",
             schedule: ["Toujours ouvert"],
-            img: "images/img-hotel.jpg",
+            img: "images/ibis.jpg",
             facebook: "https://www.facebook.com/ibisReimsCentreGare/",
             website: "https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml"
           },
           {
             name: "B&B",
             id: "bandb",
-            adress: "4 Rue André Pingat, 51100 Reims",
+            adress: "4 Rue André Pingat, Reims",
             phone: "0 892 70 52 20",
             price: "€€",
             schedule: ["Toujours ouvert"],
-            img: "images/img-hotel.jpg"
+            img: "images/bandb.jpg",
+            website:"http://www.hotel-bb.com/en/hotels/reims-centre-gare.htm"
           },
+          {
+            name: "Residhome",
+            id: "residhome",
+            adress: "6 Rue de Courcelles, Reims",
+            phone: "03 26 78 17 81",
+            price: "€€",
+            schedule: ["Toujours ouvert"],
+            img: "images/residhome.jpg",
+            website:"https://www.residhome.com/residence-hoteliere-aparthotel-reims-233.html"
+          },
+          {
+            name: "Grand Hotel Continental",
+            id: "continental",
+            adress: "1 Boulevard du Général Leclerc, Reims",
+            phone: "03 26 40 39 35",
+            price: "€€€€",
+            schedule: ["Toujours ouvert"],
+            img: "images/continental.jpg",
+            website:"http://www.grandhotelcontinental.com/fr/index.php#reims-et-la-champagne.php"
+          },
+          {
+            name: "Holiday Inn",
+            id: "holidayinn",
+            adress: "46 Rue Buirette, 51100 Reims",
+            phone: "03 26 78 99 99",
+            price: "€€€€",
+            schedule: ["Toujours ouvert"],
+            img: "images/holidayinn.jpg",
+            website:"https://www.ihg.com/holidayinn/hotels/us/en/reims/rhegc/hoteldetail?cm_mmc=GoogleMaps-_-HI-_-FR-_-RHEGC"
+          }
 
         ],
-        restaurants: [
+        restaurant: [
           {
             name: "Burger King",
             id: "burgerking",
-            adress: `82 Place Drouet d&apos; Erlonn, 51100 Reims`,
-            schedule: ["mercredi 11:00–23:00", "jeudi 11:00–00:00", "vendredi 11:00–01:00", "samedi 11:00–01:00", "dimanche 12:00–23:00", "lundi 11:00–23:00", "mardi 11:00–23:00"],
-            img: "images/img-restaurant.jpg",
+            type: "Fast-Food",
+            adress: `82 Place Drouet d&apos; Erlonn, Reims`,
+            schedule: ["Mercredi 11:00–23:00", "Jeudi 11:00–00:00", "Vendredi 11:00–01:00", "Samedi 11:00–01:00", "Dimanche 12:00–23:00", "Lundi 11:00–23:00", "mardi 11:00–23:00"],
+            img: "images/burgerking.jpg",
             facebook: "https://fr-fr.facebook.com/burgerkingfranceofficiel/",
             website: "https://restaurants.burgerking.fr/reims-erlon"
           },
           {
             name: `McDonald's`,
             id: "mcdo",
-            adress: "43192 Rue de Talleyrand, 51100 Reims",
-            schedule: ["mercredi 08:00–00:00", "jeudi 08:00–00:00", "vendredi 08:00–00:00", "samedi 08:00–00:00", "dimanche 08:00–00:00", "lundi 08:00–00:00", "mardi 08:00–00:00"],
-            img: "images/img-restaurant.jpg",
+            type: "Fast-Food",
+            adress: "2 Rue de Talleyrand, Reims",
+            schedule: ["Mercredi 08:00–00:00", "Jeudi 08:00–00:00", "Vendredi 08:00–00:00", "Samedi 08:00–00:00", "Dimanche 08:00–00:00", "Lundi 08:00–00:00", "mardi 08:00–00:00"],
+            img: "images/mcdonalds.jpg",
             facebook: "https://www.facebook.com/mcdonaldsreims/",
             website: "https://www.restaurants.mcdonalds.fr/mcdonalds-reims"
+          },
+          {
+            name: `Brasserie Excelsior`,
+            id: "excelsior",
+            adress: "96 Place Drouet d'Erlon, Reims",
+            phone:"03 26 91 40 50",
+            schedule: ["Du Lundi au Vendredi", "11:30-14:30", "18:30-22:30","Dimanche","11:30-15:00","18:30-23:00"],
+            img: "images/excelsior.jpg",
+            facebook: "https://www.facebook.com/excelsiorreims/",
+            website: "https://www.restaurant-ledito-reims.fr/"
+          },
+          {
+            name: `L'Edito`,
+            id: "edito",
+            adress: "80 Place Drouet d'Erlon, Reims",
+            phone: "03 26 40 33 06",
+            schedule: ["Du Lundi au Jeudi", "11:00-00:00", "Du Vendredi au Dimanche","11:00-01:00"],
+            img: "images/edito.jpg",
+            facebook: "https://www.facebook.com/restaurant.edito.reims",
+            website: "https://www.brasserie-excelsior-reims.fr/"
+          },
+          {
+            name: `3 Brasseurs`,
+            id: "brasseurs",
+            adress: "73 Place Drouet d'Erlon, Reims",
+            phone: "03 26 47 86 28",
+            schedule: ["Du Dimanche au Jeudi", "11:30-23:00", "Du Vendredi au Samedi","11:30-00:00"],
+            img: "images/3brasseurs.jpg",
+            facebook: "https://www.facebook.com/3brasseursreims/",
+            website: "https://restaurants.3brasseurs.com/fr/s/brasseurs/reims/619"
+          },
+          {
+            name: `L'Apostrophe`,
+            id: "apostrophe",
+            adress: "59 Place Drouet d'Erlon, Reims",
+            phone: "03 26 79 19 89",
+            schedule: ["Toute la semaine", "10:00-00:00"],
+            img: "images/apostrophe.jpg",
+            facebook: "https://www.facebook.com/lapostrophe.reims/",
+            website: "http://www.restaurant-lapostrophe.com/"
+          },
+          {
+            name: `Pizza New Délice`,
+            id: "delice",
+            type: "Fast-Food",
+            adress: "25 Rue de Courcelles, Reims",
+            schedule: ["Toute la semaine", "11:30-14:30","18:00-23:00"],
+            img: "images/newdelice.jpg",
+            facebook: "https://www.facebook.com/pages/category/Pizza-Place/PIZZA-New-Delice-128556020834545/"
+          },
+          {
+            name: `Boulangerie de la Gare`,
+            id: "boulangeriegare",
+            type: "Boulangerie",
+            adress: "43 Rue de Courcelles, Reims",
+            schedule: ["Du Lundi au Vendredi", "06:30-20:00", "Samedi", "06:30–19:30", "Fermé le Dimanche"],
+            img: "images/boulangeriegare.png",
+          },
+          {
+            name: `Fischer`,
+            id: "fischer",
+            type: "Boulangerie",
+            adress: "9 Rue Gaston Boyer, Reims",
+            schedule: ["Du Lundi au Vendredi", "07:30-20:00", "Dimanche", "07:30–13:00", "Fermé le Samedi"],
+            img: "images/fischer.jpg",
           }
         ],
         pharmacie: [
           {
             name: "Pharmacie Godfroy",
             id: "godfroy",
-            adress: "137 Rue de Courcelles, 51100 Reims",
-            schedule: ["Du lundi au vendredi", "09:00-12:15", "14:00-19:00", "Samedi", "09:00–12:15", "14:00–18:00", "Fermé le Dimanche"],
-            img: "images/img-pharmacie.jpg",
+            adress: "137 Rue de Courcelles, Reims",
+            schedule: ["Du Lundi au Vendredi", "09:00-12:15", "14:00-19:00", "Samedi", "09:00–12:15", "14:00–18:00", "Fermé le Dimanche"],
+            img: "images/godfroy.jpeg",
             website: "https://www.pharmacie-godfroy-reims.fr/"
+          },
+          {
+            name: "Pharmacie de Vesle",
+            id: "vesle",
+            adress: "168 Rue de Vesle, Reims",
+            schedule: ["Du Lundi au Samedi", "09:00-12:15", "14:00-19:00", "Fermé le Dimanche"],
+            img: "images/vesle.png",
+          },
+          {
+            name: "Pharmacie d'Erlon",
+            id: "erlon",
+            adress: "70 Place Drouet d'Erlon, Reims",
+            schedule: ["Du Lundi au Vendredi", "Ouvert 24h/24"],
+            website: "http://www.pharmacie-derlon.fr",
+            img: "images/erlon.jpg",
           }
         ]
       }
@@ -120,7 +240,12 @@
           popoverContent.appendChild(title);
           //Create H3
           let type = document.createElement('h3');
-          type.innerHTML = Object.keys(data)[k][0].toUpperCase() + Object.keys(data)[k].slice(1);
+          if (Object.values(data)[k][i].type){
+            type.innerHTML = Object.values(data)[k][i].type;
+          }
+          else{
+            type.innerHTML = Object.keys(data)[k][0].toUpperCase() + Object.keys(data)[k].slice(1);
+          }
           type.setAttribute("class", "text-secondary");
           popoverContent.appendChild(type);
           //Create Social
@@ -212,12 +337,18 @@
           cardTitle.innerHTML = Object.values(data)[k][i].name;
           let cardType = document.createElement("p");
           cardType.setAttribute("class", "text-secondary card-text");
-          cardType.innerHTML = Object.keys(data)[k][0].toUpperCase() + Object.keys(data)[k].slice(1);
+          if (Object.values(data)[k][i].type){
+            cardType.innerHTML = Object.values(data)[k][i].type;
+          }
+          else{
+            cardType.innerHTML = Object.keys(data)[k][0].toUpperCase() + Object.keys(data)[k].slice(1);
+          }
           cardBody.appendChild(cardTitle);
           cardBody.appendChild(cardType);
 
           //Create Card Button
           let cardButton = document.createElement("span");
+          cardButton.setAttribute("class", "justify-content-center d-flex");
           /*cardButton.setAttribute("data-toggle", "popover");
           cardButton.setAttribute("class", "border btn btn-lg mx-3 mb-3 pb-1 btn-light");
           cardButton.setAttribute("id", Object.values(data)[k][i].id);
@@ -269,8 +400,9 @@
         if (this.id == 'all') {
           $('#parent > div').fadeIn(450);
         } else {
-          var $el = $('.' + this.id).fadeIn(450);
           $('#parent > div').not($el).hide();
+          var $el = $('.' + this.id).fadeIn(450);
+         
         }
         $btns.removeClass('active');
         $(this).addClass('active');
