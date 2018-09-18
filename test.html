@@ -365,35 +365,14 @@
           //Create Card Button
           let cardButton = document.createElement("span");
           cardButton.setAttribute("class", "justify-content-center d-flex");
-          /*cardButton.setAttribute("data-toggle", "popover");
-          cardButton.setAttribute("class", "border btn btn-lg mx-3 mb-3 pb-1 btn-light");
-          cardButton.setAttribute("id", Object.values(data)[k][i].id);
-          cardButton.setAttribute("role", "button");
-         
-          cardButton.setAttribute("data-content", "blabla");
-          cardButton.setAttribute("data-placement", "bottom");
-          cardButton.setAttribute("data-trigger", "focus");
-          cardButton.setAttribute("title", "Plus d'infos");
-          cardButton.innerHTML = "Plus d'infos";*/
           card.appendChild(cardButton);
           cardButton.innerHTML = `<a tabindex="0" id="${Object.values(data)[k][i].id}" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true"
                 data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>`
-
-          /*console.log($(cardButton))
-          
-            $(cardButton).popover({
-             html: true,
-            content: function () {
-            var id = $(this).attr('id')
-            return $('#popover-content-' + id).html();
-            
-          })*/
 
           let cardDeck = document.getElementById("parent");
           cardDeck.appendChild(cardContainer);
         }
       }
-
 
       $("[data-toggle=popover]").each(function (i, obj) {
         console.log($('#popover-content-' + $(this).attr('id')).html())
@@ -406,11 +385,6 @@
         });
 
       });
-
-
-
-
-
 
       var $btns = $('.filter').click(function () {
         if (this.id == 'all') {
