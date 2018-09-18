@@ -15,9 +15,10 @@ section h1{
 
 /*   MENU  */
 header nav{
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100px;
+    background-color: #f3f3f3;
     text-align: center;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -39,6 +40,7 @@ header nav{
     animation-name: diapo;
     animation-duration: 15s;
     animation-iteration-count: infinite;
+    
 }
 
 .background-white{
