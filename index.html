@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <!-- FONT MONTSERRAT GOOGLE -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700" rel="stylesheet">
 
 
   <link rel="stylesheet" href="styles.css">
@@ -138,12 +138,12 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <button id="all" class="filter mr-2 px-3 btn btn-light nav-item nav-link border active" href="#">Voir
+              <!--<button id="all" class="filter mr-2 px-3 btn btn-light nav-item nav-link border active" href="#">Voir
                 Tout
-                <span class="sr-only">(current)</span></button>
-              <button id="restaurant" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Trouver
+                <span class="sr-only">(current)</span></button>-->
+              <button id="restaurant" class="filter mr-2 px-3 btn btn-light nav-item nav-link border active" href="#">Trouver
                 à
-                manger</button>
+                manger<span class="sr-only">(current)</span></button></button>
               <button id="pharmacie" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Se
                 soigner</button>
               <button id="hotel" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Dormir</button>
@@ -417,6 +417,9 @@
               adressContent.innerHTML = Object.values(data)[k][i].adress
               adressContent.setAttribute("class", "text-secondary");
               popoverContent.appendChild(adressContent);
+
+              let separator1 = document.createElement("hr");
+              popoverContent.appendChild(separator1);
     
               //Create Phone
               if (Object.values(data)[k][i].phone) {
@@ -427,6 +430,9 @@
                 phoneContent.setAttribute("class", "text-secondary");
                 popoverContent.appendChild(phone);
                 popoverContent.appendChild(phoneContent);
+
+                let separator2 = document.createElement("hr");
+                popoverContent.appendChild(separator2);
               }
     
               //Create Price
@@ -438,6 +444,9 @@
                 priceContent.setAttribute("class", "text-secondary");
                 popoverContent.appendChild(price);
                 popoverContent.appendChild(priceContent);
+
+                let separator3 = document.createElement("hr");
+                popoverContent.appendChild(separator3);
               }
     
               //Create Horaires
@@ -492,7 +501,7 @@
               let cardButton = document.createElement("span");
               cardButton.setAttribute("class", "justify-content-center d-flex");
               card.appendChild(cardButton);
-              cardButton.innerHTML = `<a tabindex="0" id="${Object.values(data)[k][i].id}" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true"
+              cardButton.innerHTML = `<a tabindex="0" id="${Object.values(data)[k][i].id}" class="moreInfos border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true"
                     data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>`
     
               let cardDeck = document.getElementById("parent");
@@ -501,7 +510,6 @@
           }
     
           $("[data-toggle=popover]").each(function (i, obj) {
-            console.log($('#popover-content-' + $(this).attr('id')).html())
             $(this).popover({
               html: true,
               content: function () {
@@ -512,6 +520,10 @@
     
           });
     
+          $(".pharmacie, .hotel").each(function() {
+            $(this).hide();
+          });
+
           var $btns = $('.filter').click(function () {
             if (this.id == 'all') {
               $('#parent > div').fadeIn(450);
@@ -523,6 +535,16 @@
             $btns.removeClass('active');
             $(this).addClass('active');
           })
+
+          
+
+          var $btns = $('.moreInfos').click(function () {
+            $btns.removeClass('active');
+            $(this).addClass('active');
+          })
+
+          
+          
         });
       </script>
 </body>
