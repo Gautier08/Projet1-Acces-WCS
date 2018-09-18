@@ -13,8 +13,8 @@
   <!-- Fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
-<!-- FONT MONTSERRAT GOOGLE -->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
+  <!-- FONT MONTSERRAT GOOGLE -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
 
 
   <link rel="stylesheet" href="styles.css">
@@ -63,7 +63,6 @@
         <a class="btn bg-orange btn-lg float-right" target="_blank" href="http://wildcodeschool-2902314.hs-sites.com/wild-breakfast?__hstc=83542985.cd087d4471f4dcea096ae74d7fbabf4d.1536153181958.1536679825651.1536743674478.4&__hssc=83542985.1.1536743674478&__hsfp=2520156938"
           role="button">PARTICIPER A UN WILD BREAKFAST</a>
       </div>
-    </div>
     </section>
     <!--  ---------------------------------------SECTION TRANSPORTS ------------------------------------------- -->
     <section id="access" class="py-5">
@@ -127,130 +126,27 @@
       <!--debut section useful-->
       <div class="col-10 offset-1">
         <h1>Vous avez besoin d'un service ?</h1>
-        <p class="mb-0">Filtrer votre recherche</p>
         <nav class="bg-white mb-4 navbar navbar-expand-lg navbar-light bg-light filters-buttons">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-            aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="mr-2 px-3 text-light btn btn-dark nav-item nav-link active" href="#">Voir Tout <span class="sr-only">(current)</span></a>
-              <a class="mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Trouver à manger</a>
-              <a class="mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Se soigner</a>
-              <a class="mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Dormir</a>
+              <button id="all" class="filter mr-2 px-3 btn btn-light nav-item nav-link border active" href="#">Voir
+                Tout
+                <span class="sr-only">(current)</span></button>
+              <button id="restaurant" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Trouver
+                à
+                manger</button>
+              <button id="pharmacie" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Se
+                soigner</button>
+              <button id="hotel" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Dormir</button>
             </div>
           </div>
         </nav>
         <!--end filters buttons-->
-        <div id="popover-content-mcdo" class="d-none infos">
-          <h2>McDonald's</h2>
-          <h3 class="text-secondary">Fast-food</h3>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="mr-1"><i class="text-dark fab fa-2x fa-facebook-square"></i></a>
-            <a href="#"><i class="text-dark fas fa-2x fa-external-link-square-alt"></i></a>
-          </div>
-          <h5><i class="fas fa-map-marker-alt"></i> Adresse :</h5>
-          <p><a class="text-secondary" href="#">43192 Rue de Talleyrand, 51100 Reims</a></p>
-          <h5><i class="far fa-clock"></i> Horaires :</h5>
-          <ul class="text-secondary">
-            <li>mercredi 08:00–00:00</li>
-            <li>jeudi 08:00–00:00</li>
-            <li>vendredi 08:00–00:00</li>
-            <li>samedi 08:00–00:00</li>
-            <li>dimanche 08:00–00:00</li>
-            <li>lundi 08:00–00:00</li>
-            <li>mardi 08:00–00:00</li>
-          </ul>
-        </div>
-        <div id="popover-content-burgerking" class="d-none infos">
-          <h2>Burger King</h2>
-          <h3 class="text-secondary">Fast-food</h3>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="mr-1"><i class="text-dark fab fa-2x fa-facebook-square"></i></a>
-            <a href="#"><i class="text-dark fas fa-2x fa-external-link-square-alt"></i></a>
-          </div>
-          <h5><i class="fas fa-map-marker-alt"></i> Adresse :</h5>
-          <p class="text-secondary">82 Place Drouet d'Erlon, 51100 Reims</p>
-          <h5><i class="far fa-clock"></i> Horaires :</h5>
-          <ul class="text-secondary">
-            <li>mercredi 11:00–23:00</li>
-            <li>jeudi 11:00–00:00</li>
-            <li>vendredi 11:00–01:00</li>
-            <li>samedi 11:00–01:00</li>
-            <li>dimanche 12:00–23:00</li>
-            <li>lundi 11:00–23:00</li>
-            <li>mardi 11:00–23:00</li>
-          </ul>
-        </div>
-        <div class="row card-deck">
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card mb-3 shadow-sm">
-              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-              <div class="card-body p-3">
-                <h5 class="card-title mb-0">McDonald's</h5>
-                <p class="text-secondary card-text">Fast-Food</p>
-              </div>
-              <a tabindex="0" id="mcdo1" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
-                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card mb-3 shadow-sm">
-              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-              <div class="card-body p-3">
-                <h5 class="card-title mb-0">Burger King</h5>
-                <p class="text-secondary card-text">Fast-Food</p>
-              </div>
-              <a tabindex="0" id="burgerking" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
-                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card mb-3 shadow-sm">
-              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-              <div class="card-body p-3">
-                <h5 class="card-title mb-0">McDonald's</h5>
-                <p class="text-secondary card-text">Fast-Food</p>
-              </div>
-              <a tabindex="0" 1 class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
-                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card mb-3 shadow-sm">
-              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-              <div class="card-body p-3">
-                <h5 class="card-title mb-0">Burger King</h5>
-                <p class="text-secondary card-text">Fast-Food</p>
-              </div>
-              <a tabindex="0" id="burgerking1" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
-                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card mb-3 shadow-sm">
-              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-              <div class="card-body p-3">
-                <h5 class="card-title mb-0">McDonald's</h5>
-                <p class="text-secondary card-text">Fast-Food</p>
-              </div>
-              <a tabindex="0" 1 class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
-                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card mb-3 shadow-sm">
-              <img class="card-img-top" src="images/img-restaurant.jpg" alt="Image">
-              <div class="card-body p-3">
-                <h5 class="card-title mb-0">Burger King</h5>
-                <p class="text-secondary card-text">Fast-Food</p>
-              </div>
-              <a tabindex="0" id="burgerking2" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true" data-placement="bottom"
-                data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>
-            </div>
-          </div>
-        </div>
+        <div id="parent" class="row card-deck"></div>
         <!--end row-->
       </div>
       <!--end col-->
@@ -279,7 +175,8 @@
             <a class="nav-link text-white" target="_blank" href="https://twitter.com/wildschoolreims"><i class="fab fa-twitter-square fa-lg"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" target="_blank" href="https://www.linkedin.com/school/wild-code-school/"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a class="nav-link text-white" target="_blank" href="https://www.linkedin.com/school/wild-code-school/"><i
+                class="fab fa-linkedin fa-lg"></i></a>
           </li>
         </ul>
       </nav>
@@ -288,40 +185,341 @@
   <!--Fin du container-fluid -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script>
-    $("[data-toggle=popover]").each(function (i, obj) {
-
-      $(this).popover({
-        html: true,
-        content: function () {
-          var id = $(this).attr('id')
-          return $('#popover-content-' + id).html();
-        }
-      });
-
-    });
-
-let anchorlinks = document.querySelectorAll('header nav a[href^="#"]')
- 
- for (let item of anchorlinks) { // relitere 
-     item.addEventListener('click', (e)=> {
-         let hashval = item.getAttribute('href')
-         let target = document.querySelector(hashval)
-         target.scrollIntoView({
-             behavior: 'smooth',
-             block: 'start'
-         })
-         history.pushState(null, null, hashval)
-         e.preventDefault()
-     })
- }
-  </script>
+    <script>
+        $(document).ready(function () {
+    
+    
+          const data = {
+            hotel: [
+              {
+                name: "Ibis Centre",
+                id: "ibis",
+                adress: "28 Boulevard Joffre, 51100 Reims",
+                phone: "03 26 40 03 24",
+                price: "€€€",
+                schedule: ["Toujours ouvert"],
+                img: "images/ibis.jpg",
+                facebook: "https://www.facebook.com/ibisReimsCentreGare/",
+                website: "https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml"
+              },
+              {
+                name: "B&B",
+                id: "bandb",
+                adress: "4 Rue André Pingat, 51100 Reims",
+                phone: "0 892 70 52 20",
+                price: "€€",
+                schedule: ["Toujours ouvert"],
+                img: "images/bandb.jpg",
+                website: "http://www.hotel-bb.com/en/hotels/reims-centre-gare.htm"
+              },
+              {
+                name: "Residhome",
+                id: "residhome",
+                adress: "6 Rue de Courcelles, 51100 Reims",
+                phone: "03 26 78 17 81",
+                price: "€€",
+                schedule: ["Toujours ouvert"],
+                img: "images/residhome.jpg",
+                website: "https://www.residhome.com/residence-hoteliere-aparthotel-reims-233.html"
+              },
+              {
+                name: "Grand Hotel Continental",
+                id: "continental",
+                adress: "1 Boulevard du Général Leclerc, 51100 Reims",
+                phone: "03 26 40 39 35",
+                price: "€€€€",
+                schedule: ["Toujours ouvert"],
+                img: "images/continental.jpg",
+                website: "http://www.grandhotelcontinental.com/fr/index.php#reims-et-la-champagne.php"
+              },
+              {
+                name: "Holiday Inn",
+                id: "holidayinn",
+                adress: "46 Rue Buirette, 51100 51100 Reims",
+                phone: "03 26 78 99 99",
+                price: "€€€€",
+                schedule: ["Toujours ouvert"],
+                img: "images/holidayinn.jpg",
+                website: "https://www.ihg.com/holidayinn/hotels/us/en/reims/rhegc/hoteldetail?cm_mmc=GoogleMaps-_-HI-_-FR-_-RHEGC"
+              }
+    
+            ],
+            restaurant: [
+              {
+                name: "Burger King",
+                id: "burgerking",
+                type: "Fast-Food",
+                adress: `82 Place Drouet d&apos; Erlonn, 51100 Reims`,
+                schedule: ["Mercredi 11:00–23:00", "Jeudi 11:00–00:00", "Vendredi 11:00–01:00", "Samedi 11:00–01:00", "Dimanche 12:00–23:00", "Lundi 11:00–23:00", "mardi 11:00–23:00"],
+                img: "images/burgerking.jpg",
+                facebook: "https://fr-fr.facebook.com/burgerkingfranceofficiel/",
+                website: "https://restaurants.burgerking.fr/reims-erlon"
+              },
+              {
+                name: `McDonald's`,
+                id: "mcdo",
+                type: "Fast-Food",
+                adress: "2 Rue de Talleyrand, 51100 Reims",
+                schedule: ["Mercredi 08:00–00:00", "Jeudi 08:00–00:00", "Vendredi 08:00–00:00", "Samedi 08:00–00:00", "Dimanche 08:00–00:00", "Lundi 08:00–00:00", "mardi 08:00–00:00"],
+                img: "images/mcdonalds.jpg",
+                facebook: "https://www.facebook.com/mcdonaldsreims/",
+                website: "https://www.restaurants.mcdonalds.fr/mcdonalds-reims"
+              },
+              {
+                name: `Brasserie Excelsior`,
+                id: "excelsior",
+                adress: "96 Place Drouet d'Erlon, 51100 Reims",
+                phone: "03 26 91 40 50",
+                schedule: ["Du Lundi au Vendredi", "11:30-14:30", "18:30-22:30", "Dimanche", "11:30-15:00", "18:30-23:00"],
+                img: "images/excelsior.jpg",
+                facebook: "https://www.facebook.com/excelsiorreims/",
+                website: "https://www.restaurant-ledito-reims.fr/"
+              },
+              {
+                name: `L'Edito`,
+                id: "edito",
+                adress: "80 Place Drouet d'Erlon, 51100 Reims",
+                phone: "03 26 40 33 06",
+                schedule: ["Du Lundi au Jeudi", "11:00-00:00", "Du Vendredi au Dimanche", "11:00-01:00"],
+                img: "images/edito.jpg",
+                facebook: "https://www.facebook.com/restaurant.edito.reims",
+                website: "https://www.brasserie-excelsior-reims.fr/"
+              },
+              {
+                name: `3 Brasseurs`,
+                id: "brasseurs",
+                adress: "73 Place Drouet d'Erlon, 51100 Reims",
+                phone: "03 26 47 86 28",
+                schedule: ["Du Dimanche au Jeudi", "11:30-23:00", "Du Vendredi au Samedi", "11:30-00:00"],
+                img: "images/3brasseurs.jpg",
+                facebook: "https://www.facebook.com/3brasseursreims/",
+                website: "https://restaurants.3brasseurs.com/fr/s/brasseurs/reims/619"
+              },
+              {
+                name: `L'Apostrophe`,
+                id: "apostrophe",
+                adress: "59 Place Drouet d'Erlon, 51100 Reims",
+                phone: "03 26 79 19 89",
+                schedule: ["Toute la semaine", "10:00-00:00"],
+                img: "images/apostrophe.jpg",
+                facebook: "https://www.facebook.com/lapostrophe.reims/",
+                website: "http://www.restaurant-lapostrophe.com/"
+              },
+              {
+                name: `Pizza New Délice`,
+                id: "delice",
+                type: "Fast-Food",
+                adress: "25 Rue de Courcelles, 51100 Reims",
+                schedule: ["Toute la semaine", "11:30-14:30", "18:00-23:00"],
+                img: "images/newdelice.jpg",
+                facebook: "https://www.facebook.com/pages/category/Pizza-Place/PIZZA-New-Delice-128556020834545/"
+              },
+              {
+                name: `Boulangerie de la Gare`,
+                id: "boulangeriegare",
+                type: "Boulangerie",
+                adress: "43 Rue de Courcelles, 51100 Reims",
+                schedule: ["Du Lundi au Vendredi", "06:30-20:00", "Samedi", "06:30–19:30", "Fermé le Dimanche"],
+                img: "images/boulangeriegare.png",
+              },
+              {
+                name: `Fischer`,
+                id: "fischer",
+                type: "Boulangerie",
+                adress: "9 Rue Gaston Boyer, 51100 Reims",
+                schedule: ["Du Lundi au Vendredi", "07:30-20:00", "Dimanche", "07:30–13:00", "Fermé le Samedi"],
+                img: "images/fischer.jpg",
+              }
+            ],
+            pharmacie: [
+              {
+                name: "Pharmacie Godfroy",
+                id: "godfroy",
+                adress: "137 Rue de Courcelles, 51100 Reims",
+                schedule: ["Du Lundi au Vendredi", "09:00-12:15", "14:00-19:00", "Samedi", "09:00–12:15", "14:00–18:00", "Fermé le Dimanche"],
+                img: "images/godfroy.jpeg",
+                website: "https://www.pharmacie-godfroy-reims.fr/"
+              },
+              {
+                name: "Pharmacie de Vesle",
+                id: "vesle",
+                adress: "168 Rue de Vesle, 51100 Reims",
+                schedule: ["Du Lundi au Samedi", "09:00-12:15", "14:00-19:00", "Fermé le Dimanche"],
+                img: "images/vesle.png",
+              },
+              {
+                name: "Pharmacie d'Erlon",
+                id: "erlon",
+                adress: "70 Place Drouet d'Erlon, 51100 Reims",
+                schedule: ["Du Lundi au Vendredi", "Ouvert 24h/24"],
+                website: "http://www.pharmacie-derlon.fr",
+                img: "images/erlon.jpg",
+              }
+            ]
+          }
+    
+          for (let k = 0; k < Object.keys(data).length; k++) {
+            for (let i = 0; i < Object.values(data)[k].length; i++) {
+              //Create popoverContent
+              //Create Container
+              let popoverContent = document.createElement('div');
+              let id = "popover-content-" + Object.values(data)[k][i].id;
+              popoverContent.setAttribute("id", id);
+              popoverContent.setAttribute("class", "d-none");
+              //Create H2
+              let title = document.createElement('h2');
+              title.innerHTML = Object.values(data)[k][i].name;
+              popoverContent.appendChild(title);
+              //Create H3
+              let type = document.createElement('h3');
+              if (Object.values(data)[k][i].type) {
+                type.innerHTML = Object.values(data)[k][i].type;
+              }
+              else {
+                type.innerHTML = Object.keys(data)[k][0].toUpperCase() + Object.keys(data)[k].slice(1);
+              }
+              type.setAttribute("class", "text-secondary");
+              popoverContent.appendChild(type);
+              //Create Social
+              if (Object.values(data)[k][i].facebook || Object.values(data)[k][i].website) {
+                let social = document.createElement('div');
+                social.setAttribute("class", "d-flex justify-content-end");
+                if (Object.values(data)[k][i].facebook) {
+                  let facebookLink = document.createElement('a');
+                  facebookLink.innerHTML = '<i class="text-dark fab fa-2x fa-facebook-square"></i>';
+                  facebookLink.setAttribute("href", Object.values(data)[k][i].facebook);
+                  facebookLink.setAttribute("class", "mr-1");
+                  social.appendChild(facebookLink);
+                }
+                if (Object.values(data)[k][i].website) {
+                  let websiteLink = document.createElement('a');
+                  websiteLink.innerHTML = '<i class="text-dark fas fa-2x fa-external-link-square-alt"></i>';
+                  websiteLink.setAttribute("href", Object.values(data)[k][i].website);
+                  social.appendChild(websiteLink);
+                }
+                popoverContent.appendChild(social);
+              }
+              //Create Adress
+              let adressTitle = document.createElement('h5');
+              adressTitle.innerHTML = '<i class="fas fa-map-marker-alt"></i> Adresse :';
+              popoverContent.appendChild(adressTitle);
+              let adressContent = document.createElement('p');
+              adressContent.innerHTML = Object.values(data)[k][i].adress
+              adressContent.setAttribute("class", "text-secondary");
+              popoverContent.appendChild(adressContent);
+    
+              //Create Phone
+              if (Object.values(data)[k][i].phone) {
+                let phone = document.createElement('h5');
+                phone.innerHTML = '<i class="fas fa-phone-square"></i> Téléphone :';
+                let phoneContent = document.createElement('p');
+                phoneContent.innerHTML = Object.values(data)[k][i].phone;
+                phoneContent.setAttribute("class", "text-secondary");
+                popoverContent.appendChild(phone);
+                popoverContent.appendChild(phoneContent);
+              }
+    
+              //Create Price
+              if (Object.values(data)[k][i].price) {
+                let price = document.createElement('h5');
+                price.innerHTML = '<i class="fas fa-hand-holding-usd"></i> Gamme de prix :';
+                let priceContent = document.createElement('p');
+                priceContent.innerHTML = Object.values(data)[k][i].price;
+                priceContent.setAttribute("class", "text-secondary");
+                popoverContent.appendChild(price);
+                popoverContent.appendChild(priceContent);
+              }
+    
+              //Create Horaires
+              let scheduleTitle = document.createElement('h5');
+              scheduleTitle.innerHTML = '<i class="far fa-clock"></i> Horaires :';
+              popoverContent.appendChild(scheduleTitle);
+              let scheduleContent = document.createElement('ul');
+              scheduleContent.setAttribute("class", "text-secondary");
+              for (let j = 0; j < Object.values(data)[k][i].schedule.length; j++) {
+                let scheduleContentLi = document.createElement('li');
+                scheduleContentLi.innerHTML = Object.values(data)[k][i].schedule[j];
+                scheduleContent.appendChild(scheduleContentLi);
+              }
+              popoverContent.appendChild(scheduleContent);
+              let element = document.getElementById("useful");
+              element.appendChild(popoverContent);
+    
+              //Create Cards
+              //Create Container
+              let cardContainer = document.createElement('div');
+              cardContainer.setAttribute("class", Object.keys(data)[k] + " col-12 col-sm-6 col-md-4 col-lg-3");
+              let card = document.createElement('div');
+              card.setAttribute("class", "card mb-3");
+              cardContainer.appendChild(card);
+    
+              //Create IMG
+              let imgCard = document.createElement('img');
+              imgCard.setAttribute("class", "card-img-top");
+              imgCard.setAttribute("src", Object.values(data)[k][i].img);
+              imgCard.setAttribute("alt", Object.values(data)[k][i].name);
+              card.appendChild(imgCard);
+    
+              //Create Card Body
+              let cardBody = document.createElement("div");
+              cardBody.setAttribute("class", "card-body p-3")
+              card.appendChild(cardBody);
+              let cardTitle = document.createElement("h5");
+              cardTitle.setAttribute("class", "card-title mb-0");
+              cardTitle.innerHTML = Object.values(data)[k][i].name;
+              let cardType = document.createElement("p");
+              cardType.setAttribute("class", "text-secondary card-text");
+              if (Object.values(data)[k][i].type) {
+                cardType.innerHTML = Object.values(data)[k][i].type;
+              }
+              else {
+                cardType.innerHTML = Object.keys(data)[k][0].toUpperCase() + Object.keys(data)[k].slice(1);
+              }
+              cardBody.appendChild(cardTitle);
+              cardBody.appendChild(cardType);
+    
+              //Create Card Button
+              let cardButton = document.createElement("span");
+              cardButton.setAttribute("class", "justify-content-center d-flex");
+              card.appendChild(cardButton);
+              cardButton.innerHTML = `<a tabindex="0" id="${Object.values(data)[k][i].id}" class="border btn btn-lg mx-3 mb-3 pb-1 btn-light" role="button" data-html="true"
+                    data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Plus d'infos">Plus d'infos</a>`
+    
+              let cardDeck = document.getElementById("parent");
+              cardDeck.appendChild(cardContainer);
+            }
+          }
+    
+          $("[data-toggle=popover]").each(function (i, obj) {
+            console.log($('#popover-content-' + $(this).attr('id')).html())
+            $(this).popover({
+              html: true,
+              content: function () {
+                var id = $(this).attr('id')
+                return $('#popover-content-' + id).html();
+              }
+            });
+    
+          });
+    
+          var $btns = $('.filter').click(function () {
+            if (this.id == 'all') {
+              $('#parent > div').fadeIn(450);
+            } else {
+              $('#parent > div').not($el).hide();
+              var $el = $('.' + this.id).fadeIn(450);
+    
+            }
+            $btns.removeClass('active');
+            $(this).addClass('active');
+          })
+        });
+      </script>
 </body>
 
 </html>
