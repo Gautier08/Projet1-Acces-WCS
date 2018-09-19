@@ -126,17 +126,14 @@
       <!--debut section useful-->
       <div class="col-10 offset-1">
         <h1>Vous avez besoin d'un service ?</h1>
-        <nav class="bg-white mb-4 navbar navbar-expand-lg navbar-light bg-light filters-buttons">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+        <nav class="sticky-top bg-white mb-1 navbar navbar-expand-lg navbar-light bg-light filters-buttons">
+          
+          <div class=" navbar-collapse" id="navbarNavAltMarkup">
+            <div class="nav">
               <!--<button id="all" class="filter mr-2 px-3 btn btn-light nav-item nav-link border active" href="#">Voir
                 Tout
                 <span class="sr-only">(current)</span></button>-->
-              <button id="restaurant" class="filter mr-2 px-3 btn btn-light nav-item nav-link border active" href="#">Trouver
+              <button id="restaurant" class="filter mr-2 p-1 px-sm-3 btn btn-light nav-item nav-link border active" href="#">Trouver
                 à
                 manger<span class="sr-only">(current)</span></button></button>
               <button id="pharmacie" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Se
@@ -145,6 +142,7 @@
             </div>
           </div>
         </nav>
+        <hr>  
         <!--end filters buttons-->
         <div id="parent" class="row card-deck"></div>
         <!--end row-->
@@ -546,11 +544,11 @@
           })
 
 
-          /*var $btns = $('.moreInfos').click(function () {
-            $btns.removeClass('active');
-            $(this).addClass('active');
-          })*/
-
+          $(".sticky-top").sticky({
+        topSpacing: 90
+        , zIndex: 2
+        , stopper: "#google_maps"
+         });
           
           
         });

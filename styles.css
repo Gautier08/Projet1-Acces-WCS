@@ -98,15 +98,14 @@ header nav ul li a i, header nav ul li a img{
     border:1px solid #fff !important;
   }
 
-  @media (max-width: 576px) { 
+
+/*   MEDIA QUERY  */
+
+@media (max-width: 576px) { 
     #useful img{
       height:40vw;
     }
-    
-   }
-
-
-/*   MEDIA QUERY  */
+}
 
 @media (max-width: 767.98px) {
   header nav{
@@ -131,4 +130,15 @@ header nav ul li a i, header nav ul li a img{
     height : 55px;
     width: auto;
   }   
+
+  #useful .sticky-top{
+    top:75px;
+    padding-bottom:0 !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    #useful .moreInfos{
+        font-size:1rem;
+    }
 }
