@@ -1,6 +1,13 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -72,24 +79,23 @@
                 Les rues avenantes à l'école étant payantes, nous vous conseillons d'utiliser les transports en communs.
                 </p>
               </div>
-        <div class="col-sm-3 offset-1 col-10">
-          <img src="images/map-marked-alt-solid.svg" alt="transport_map" width="100%" class="rounded-circle border border-dark">
+        <div class="col-md offset-1 col-10">
+          <img src="images/map.png" alt="transport_map" width="100%" class="rounded-circle border shadow-lg" >
         </div>
         <div class="col-12 col-sm-4">
           <h3><i class="fas fa-bus fa-2x pr-4"></i>BUS</h3>
-          <ul>
-            <li>Ligne 3</li>
-            <li>Ligne 4</li>
-            <li>Ligne 9</li>
+          <ul class="list-group">
+            <li class="list-group-item">Ligne <span class="ml-1 third_line"><b>3</b></span></li>
+            <li class="list-group-item">Ligne <span class="ml-1 fourth_line"><b>4</b></span></li>
+            <li class="list-group-item">Ligne <span class="ml-1 nineth_line"><b>9</b></span></li>
           </ul>
           <h3>Arrêt Roederer</h3>
         </div>
         <div class="col-12 col-sm-4">
           <h3><i class="fas fa-train fa-2x pr-4"></i>TRAM</h3>
-          <ul>
-            <li>Ligne A</li>
-            <li>Ligne B</li>
-            <li>vide</li>
+          <ul class="list-group">
+            <li class="list-group-item">Ligne <span class="ml-1 mr-1 rounded-circle A_line"><b>A</b></span>5 minutes depuis l'arrêt St Thomas</li>
+            <li class="list-group-item">Ligne <span class="ml-1 mr-1 rounded-circle B_line"><b>B</b></span>5 minutes depuis l'arrêt Opéra</li>
           </ul>
           <h3>Arrêt Gare centre</h3>
         </div>
@@ -108,15 +114,15 @@
             <p>Ici on peut trouver une pépinière d’entreprises, une solution d’incubation, un espace de coworking et deux « boîtes à outils » qui serviront à la production audiovisuelle (court et long métrage, animation, docu, webdesign…) et à l’accompagnement des entrepreneurs.
             </p>
         <div class="d-flex">
-          <a class="mr-2 text-light" href="https://fr-fr.facebook.com/quartierlibrereims/"><i class="fab fa-facebook-square fa-2x"></i></a>
-          <a class="mr-2 text-light" href="https://twitter.com/quartierlibrers?lang=fr"><i class="fab fa-twitter-square fa-2x"></i></a>
-          <a class="ml-auto mr-2 text-light" href="http://www.lunion.fr/90029/article/2018-05-08/reims-le-nouveau-quartier-libre-invite-ses-voisins">Article
+          <a class="mr-2 text-primary" href="https://fr-fr.facebook.com/quartierlibrereims/"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a class="mr-2 text-info" href="https://twitter.com/quartierlibrers?lang=fr"><i class="fab fa-twitter-square fa-2x"></i></a>
+          <a class="ml-auto mr-2 text-secondary" href="http://www.lunion.fr/90029/article/2018-05-08/reims-le-nouveau-quartier-libre-invite-ses-voisins">Article
             de l'Union<i class="fas fa-bookmark fa-2x pl-2"></i></a>
         </div>
       </div>
-      <div class="col-md-3 col-10 offset-1 order-md-last order-first">
+      <div class="col-md-3 col-10 order-md-last order-first">
         <figure>
-          <img class="w-100" src="images/city-solid.svg" alt="">
+          <img class="w-100" src="images/circle-quartierlibre.png" alt="">
         </figure>
       </div>
     </section>
@@ -125,17 +131,14 @@
       <!--debut section useful-->
       <div class="col-10 offset-1">
         <h1>Vous avez besoin d'un service ?</h1>
-        <nav class="bg-white mb-4 navbar navbar-expand-lg navbar-light bg-light filters-buttons">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+        <nav class="sticky-top bg-white mb-1 navbar navbar-expand-lg navbar-light bg-light filters-buttons">
+          
+          <div class=" navbar-collapse" id="navbarNavAltMarkup">
+            <div class="nav">
               <!--<button id="all" class="filter mr-2 px-3 btn btn-light nav-item nav-link border active" href="#">Voir
                 Tout
                 <span class="sr-only">(current)</span></button>-->
-              <button id="restaurant" class="filter mr-2 px-3 btn btn-light nav-item nav-link border active" href="#">Trouver
+              <button id="restaurant" class="filter mr-2 p-1 px-sm-3 btn btn-light nav-item nav-link border active" href="#">Trouver
                 à
                 manger<span class="sr-only">(current)</span></button>
               <button id="pharmacie" class="filter mr-2 px-3 btn btn-light nav-item nav-link border" href="#">Se
@@ -144,6 +147,7 @@
             </div>
           </div>
         </nav>
+        <hr>  
         <!--end filters buttons-->
         <div id="parent" class="row card-deck"></div>
         <!--end row-->
@@ -388,7 +392,7 @@
               let popoverContent = document.createElement('div');
               let id = "popover-content-" + Object.values(data)[k][i].id;
               popoverContent.setAttribute("id", id);
-              popoverContent.setAttribute("class", "d-none");
+              popoverContent.setAttribute("class", "d-none popover-content");
               //Create H2
               let title = document.createElement('h2');
               title.innerHTML = Object.values(data)[k][i].name;
@@ -470,6 +474,7 @@
               scheduleContent.setAttribute("class", "text-secondary");
               for (let j = 0; j < Object.values(data)[k][i].schedule.length; j++) {
                 let scheduleContentLi = document.createElement('li');
+                scheduleContentLi.setAttribute("class", "text-secondary");
                 scheduleContentLi.innerHTML = Object.values(data)[k][i].schedule[j];
                 scheduleContent.appendChild(scheduleContentLi);
               }
@@ -550,11 +555,11 @@
           })
 
 
-          /*var $btns = $('.moreInfos').click(function () {
-            $btns.removeClass('active');
-            $(this).addClass('active');
-          })*/
-
+          $(".sticky-top").sticky({
+        topSpacing: 90
+        , zIndex: 2
+        , stopper: "#google_maps"
+         });
           
           
         });
