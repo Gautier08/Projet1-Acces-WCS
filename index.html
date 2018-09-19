@@ -382,7 +382,7 @@
               let popoverContent = document.createElement('div');
               let id = "popover-content-" + Object.values(data)[k][i].id;
               popoverContent.setAttribute("id", id);
-              popoverContent.setAttribute("class", "d-none");
+              popoverContent.setAttribute("class", "d-none popover-content");
               //Create H2
               let title = document.createElement('h2');
               title.innerHTML = Object.values(data)[k][i].name;
@@ -464,6 +464,7 @@
               scheduleContent.setAttribute("class", "text-secondary");
               for (let j = 0; j < Object.values(data)[k][i].schedule.length; j++) {
                 let scheduleContentLi = document.createElement('li');
+                scheduleContentLi.setAttribute("class", "text-secondary");
                 scheduleContentLi.innerHTML = Object.values(data)[k][i].schedule[j];
                 scheduleContent.appendChild(scheduleContentLi);
               }

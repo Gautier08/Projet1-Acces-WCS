@@ -97,6 +97,27 @@ header nav ul li a i, header nav ul li a img{
     color:#fff;
     border:1px solid #fff !important;
   }
+  
+  .popover h5{
+      color:#f3a61f;
+  }
+
+  .popover h3{
+    font-size:1rem;
+}
+
+  .popover p{
+      margin-bottom:0;
+  }
+
+  .popover hr{
+      margin:0.5rem 0;
+  }
+
+  .popover h3.popover-header{
+      background-color: #f3a61f; 
+      color:#fff !important;    
+  }
 
 
 /*   MEDIA QUERY  */
