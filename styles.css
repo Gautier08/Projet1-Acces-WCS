@@ -139,11 +139,15 @@ header nav ul li a i, header nav ul li a img{
   display:flex;
 }
 
-.list-group-flush{
-  border: 0px;
+.list-group ul{
+  border: none;
 }
 
-#access #third_line{
+#access .list-group-item{
+  border: none;
+}
+
+#access .third_line{
   background-color: violet;
   color: white;
   height: 25px;
@@ -151,7 +155,7 @@ header nav ul li a i, header nav ul li a img{
   text-align:center;
 }
 
-#access #fourth_line{
+#access .fourth_line{
   background-color: gold;
   color: black;
   height: 25px;
@@ -159,7 +163,7 @@ header nav ul li a i, header nav ul li a img{
   text-align:center;
 }
 
-#access #nineth_line{
+#access .nineth_line{
   background-color: brown;
   color: white;
   height: 25px;
@@ -167,7 +171,7 @@ header nav ul li a i, header nav ul li a img{
   text-align:center;
 }
 
-#access #A_line{
+#access .A_line{
   background-color: red;
   color: white;
   height: 25px;
@@ -175,7 +179,7 @@ header nav ul li a i, header nav ul li a img{
   text-align:center;
 }
 
-#access #B_line{
+#access .B_line{
   background-color: blue;
   color: white;
   height: 25px;
