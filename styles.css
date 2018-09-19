@@ -214,6 +214,14 @@ header nav ul li a:hover{
   border: none;
 }
 
+.box {
+  /*display: flex;
+  /*align-items: stretch;*/
+  /*justify-content: center;*/
+  /*flex-direction: column;*/
+}
+
+
 #access .fa-bus{
   background-color: gray;
   border-radius: 35px;
@@ -278,6 +286,10 @@ header nav ul li a:hover{
   height: 25px;
   min-width: 25px;
   text-align:center;
+}
+
+.tram h3{
+  margin-top:12px;
 }
 
 /* QUARTIER LIBRE SECTION */
