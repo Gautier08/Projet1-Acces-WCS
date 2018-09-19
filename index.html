@@ -337,7 +337,7 @@
                 type: "Fast-Food",
                 adress: "25 Rue de Courcelles, 51100 Reims",
                 schedule: ["Toute la semaine", "11:30-14:30", "18:00-23:00"],
-                img: "images/newdelice.jpg",
+                img: "images/newdelice2.jpg",
                 facebook: "https://www.facebook.com/pages/category/Pizza-Place/PIZZA-New-Delice-128556020834545/"
               },
               {
@@ -490,11 +490,14 @@
               cardContainer.appendChild(card);
     
               //Create IMG
+              let containerImg = document.createElement('span');
+              containerImg.setAttribute("style", "overflow:hidden");
+              card.appendChild(containerImg);
               let imgCard = document.createElement('img');
               imgCard.setAttribute("class", "card-img-top");
               imgCard.setAttribute("src", Object.values(data)[k][i].img);
               imgCard.setAttribute("alt", Object.values(data)[k][i].name);
-              card.appendChild(imgCard);
+              containerImg.appendChild(imgCard);
     
               //Create Card Body
               let cardBody = document.createElement("div");

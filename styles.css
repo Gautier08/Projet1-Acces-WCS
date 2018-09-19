@@ -103,6 +103,14 @@ header nav ul li a:hover{
     box-shadow: 0 .5rem 2rem rgba(0,0,0,.2);
   }
 
+  #useful .card img{
+    transition:transform 0.2s;
+}
+
+  #useful .card:hover img{
+      transform:scale(1.1);
+  }
+
   #useful .card h5{
     font-weight:500;
   }
