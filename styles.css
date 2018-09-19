@@ -58,7 +58,19 @@ header nav ul li a i, header nav ul li a img{
 .background-white{
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#home a.btn, #home a.btn span, #access a.btn{ 
+  transition: all 0.5s;
+}
+#home a.btn:hover, #home a.btn:hover span, #access a.btn:hover{
+  color : #FFF;
+  background-color: #efb247
+}
+
+#home a.shadow-lg:hover, #access a.shadow-lg:hover{
+  box-shadow: 0 0 rgba(0,0,0,.175) !important;
 }
 
 
