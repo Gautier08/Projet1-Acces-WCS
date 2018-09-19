@@ -61,7 +61,6 @@ header nav ul li a i, header nav ul li a img{
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-
 /* USEFUL SECTION */
 
 #useful img{
@@ -97,16 +96,36 @@ header nav ul li a i, header nav ul li a img{
     color:#fff;
     border:1px solid #fff !important;
   }
+  
+  .popover h5{
+      color:#f3a61f;
+  }
 
-  @media (max-width: 576px) { 
-    #useful img{
-      height:40vw;
-    }
-    
-   }
+  .popover h3{
+    font-size:1rem;
+}
+
+  .popover p{
+      margin-bottom:0;
+  }
+
+  .popover hr{
+      margin:0.5rem 0;
+  }
+
+  .popover h3.popover-header{
+      background-color: #f3a61f; 
+      color:#fff !important;    
+  }
 
 
 /*   MEDIA QUERY  */
+
+@media (max-width: 576px) { 
+    #useful img{
+      height:40vw;
+    }
+}
 
 @media (max-width: 767.98px) {
   header nav{
@@ -131,6 +150,17 @@ header nav ul li a i, header nav ul li a img{
     height : 55px;
     width: auto;
   }   
+
+  #useful .sticky-top{
+    top:75px;
+    
+    }
+}
+
+@media (max-width: 1200px) {
+    #useful .moreInfos{
+        font-size:1rem;
+    }
 }
 
 /* TRANSPORTS SECTION */
