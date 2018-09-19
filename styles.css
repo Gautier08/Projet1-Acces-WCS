@@ -130,5 +130,9 @@ header nav ul li a i, header nav ul li a img{
   header nav ul li a i, header nav ul li a img{
     height : 55px;
     width: auto;
-  }   
+  } 
+  
+  .split-md{
+    display: flex;
+  }
 }
