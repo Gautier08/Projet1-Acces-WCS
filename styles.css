@@ -173,6 +173,28 @@ header nav ul li a i, header nav ul li a img{
   border: none;
 }
 
+#access .fa-bus{
+  background-color: gray;
+  border-radius: 35px;
+  color: white;
+  height: 70px;
+  width: 70px;
+  padding-left: 12px;
+  padding-top: 12px;
+  font-size: 45px;
+}
+
+#access .fa-train{
+  background-color: gray;
+  border-radius: 35px;
+  color: white;
+  height: 70px;
+  width: 70px;
+  padding-left: 15px;
+  padding-top: 12px;
+  font-size: 45px;
+}
+
 #access .list-group-item{
   border: none;
 }
@@ -205,7 +227,7 @@ header nav ul li a i, header nav ul li a img{
   background-color: red;
   color: white;
   height: 25px;
-  width: 25px;
+  min-width: 25px;
   text-align:center;
 }
 
@@ -213,6 +235,6 @@ header nav ul li a i, header nav ul li a img{
   background-color: blue;
   color: white;
   height: 25px;
-  width: 25px;
+  min-width: 25px;
   text-align:center;
 }
