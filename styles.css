@@ -31,7 +31,21 @@ header .navbar-expand-lg .navbar-nav {
 header nav ul li a i, header nav ul li a img{
   width : 100%;
   font-size: 3.5rem;
+  transition: transform 0.2s;
 }
+
+header nav ul li a:hover i, header nav ul li a:hover img{
+  transform: scale(1.2);
+}
+
+header nav ul li a:hover{
+  color: inherit;
+}
+
+.opacity-grey{
+  opacity: 0.85;
+}
+
 
 
 /*    HOME   */
@@ -147,4 +161,9 @@ header nav ul li a i, header nav ul li a img{
   .split-md{
     display: flex;
   }
+
+  .disappear-md{
+    display: none;
+  }
+
 }
