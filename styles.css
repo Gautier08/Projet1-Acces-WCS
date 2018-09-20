@@ -104,7 +104,7 @@ header nav ul li a:hover{
   }
 
   #useful .card img{
-    transition:transform 0.2s;
+    transition:transform 0.4s;
 }
 
   #useful .card:hover img{
