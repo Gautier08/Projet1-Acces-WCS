@@ -194,10 +194,6 @@ header nav ul li a:hover{
     display: flex;
   }
 
-  .disappear-md{
-    display: none;
-  }
-
   #useful .sticky-top{
     top:75px;  
     }
