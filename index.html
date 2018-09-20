@@ -79,23 +79,23 @@
                 Les rues avenantes à l'école étant payantes, nous vous conseillons d'utiliser les transports en communs.
                 </p>
               </div>
-        <div class="col-md offset-1 col-10">
+        <div class="col-xl-3 col-lg-8 offset-xl-1 offset-2 col-10 mb-4 mb-xl-0">
           <img src="images/map.png" alt="transport_map" width="100%" class="rounded-circle border shadow-lg" >
         </div>
-        <div class="col-12 col-sm-4">
-          <h3><i class="fas fa-bus fa-2x pr-4"></i>BUS</h3>
-          <ul class="list-group">
+        <div class="col-xl-3 col-lg-8 offset-xl-1 offset-2 col-10 mb-4 mb-xl-0 d-flex flex-column pb-5">
+          <h3><i class="fas fa-bus pr-4"></i> BUS</h3>
+          <ul class="list-group  flex-fill">
             <li class="list-group-item">Ligne <span class="ml-1 third_line"><b>3</b></span></li>
             <li class="list-group-item">Ligne <span class="ml-1 fourth_line"><b>4</b></span></li>
             <li class="list-group-item">Ligne <span class="ml-1 nineth_line"><b>9</b></span></li>
           </ul>
           <h3>Arrêt Roederer</h3>
         </div>
-        <div class="col-12 col-sm-4">
-          <h3><i class="fas fa-train fa-2x pr-4"></i>TRAM</h3>
-          <ul class="list-group">
+        <div class="col-xl-3 col-lg-8 offset-xl-1 offset-2 col-10 mb-4 mb-xl-0 d-flex flex-column pb-5">
+          <h3><i class="fas fa-train  pr-4"></i> TRAM</h3>
+          <ul class="list-group flex-fill">
             <li class="list-group-item">Ligne <span class="ml-1 mr-1 rounded-circle A_line"><b>A</b></span>5 minutes depuis l'arrêt St Thomas</li>
-            <li class="list-group-item">Ligne <span class="ml-1 mr-1 rounded-circle B_line"><b>B</b></span>5 minutes depuis l'arrêt Opéra</li>
+            <li class="list-group-item">Ligne <span class="ml-1 mr-1 rounded-circle B_line"><b>B</b></span>5 minutes depuis l'arrêt Opéra></li>
           </ul>
           <h3>Arrêt Gare centre</h3>
         </div>
@@ -110,20 +110,19 @@
     <section id="quartier-libre" class="py-5 bg-orange row px-5 mb-2 text-light">
       <div class="col-md-7 offset-md-1 col-12 order-md-first order-last">
         <h1 class="titre">Quartier Libre</h1>
-        <p>La Wild Code School a élue domicile dans la rue de Saint-Brice, au sein de Quartier Libre, un bâtiment de 1 000 m2.</p>
+        <p>La Wild Code School a élue domicile dans la rue de Saint-Brice, au sein de Quartier Libre, un bâtiment de 1000 m2.</p>
             <p>Ici on peut trouver une pépinière d’entreprises, une solution d’incubation, un espace de coworking et deux « boîtes à outils » qui serviront à la production audiovisuelle (court et long métrage, animation, docu, webdesign…) et à l’accompagnement des entrepreneurs.
             </p>
+            <hr>
         <div class="d-flex">
-          <a class="mr-2 text-primary" href="https://fr-fr.facebook.com/quartierlibrereims/"><i class="fab fa-facebook-square fa-2x"></i></a>
-          <a class="mr-2 text-info" href="https://twitter.com/quartierlibrers?lang=fr"><i class="fab fa-twitter-square fa-2x"></i></a>
-          <a class="ml-auto mr-2 text-secondary" href="http://www.lunion.fr/90029/article/2018-05-08/reims-le-nouveau-quartier-libre-invite-ses-voisins">Article
+          <a class="mr-2" href="https://fr-fr.facebook.com/quartierlibrereims/"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a class="mr-2" href="https://twitter.com/quartierlibrers?lang=fr"><i class="fab fa-twitter-square fa-2x"></i></a>
+          <a class="ml-auto mr-2" href="http://www.lunion.fr/90029/article/2018-05-08/reims-le-nouveau-quartier-libre-invite-ses-voisins">Article
             de l'Union<i class="fas fa-bookmark fa-2x pl-2"></i></a>
         </div>
       </div>
-      <div class="col-md-3 col-10 order-md-last order-first">
-        <figure>
-          <img class="w-100" src="images/circle-quartierlibre.png" alt="">
-        </figure>
+      <div class="col-md-3 col-12 order-md-last mb-4 mb-sm-0 order-first">
+          <img class="w-100 d-block mx-auto" src="images/circle-quartierlibre.png" alt="">
       </div>
     </section>
     <!--  ---------------------------------------SECTION USEFUL ------------------------------------------- -->
@@ -338,7 +337,7 @@
                 type: "Fast-Food",
                 adress: "25 Rue de Courcelles, 51100 Reims",
                 schedule: ["Toute la semaine", "11:30-14:30", "18:00-23:00"],
-                img: "images/newdelice.jpg",
+                img: "images/newdelice2.jpg",
                 facebook: "https://www.facebook.com/pages/category/Pizza-Place/PIZZA-New-Delice-128556020834545/"
               },
               {
@@ -491,11 +490,14 @@
               cardContainer.appendChild(card);
     
               //Create IMG
+              let containerImg = document.createElement('span');
+              containerImg.setAttribute("style", "overflow:hidden");
+              card.appendChild(containerImg);
               let imgCard = document.createElement('img');
               imgCard.setAttribute("class", "card-img-top");
               imgCard.setAttribute("src", Object.values(data)[k][i].img);
               imgCard.setAttribute("alt", Object.values(data)[k][i].name);
-              card.appendChild(imgCard);
+              containerImg.appendChild(imgCard);
     
               //Create Card Body
               let cardBody = document.createElement("div");
@@ -555,12 +557,7 @@
           })
 
 
-          $(".sticky-top").sticky({
-        topSpacing: 90
-        , zIndex: 2
-        , stopper: "#google_maps"
-         });
-          
+
           
         });
       </script>

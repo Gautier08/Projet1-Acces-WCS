@@ -103,6 +103,14 @@ header nav ul li a:hover{
     box-shadow: 0 .5rem 2rem rgba(0,0,0,.2);
   }
 
+  #useful .card img{
+    transition:transform 0.2s;
+}
+
+  #useful .card:hover img{
+      transform:scale(1.1);
+  }
+
   #useful .card h5{
     font-weight:500;
   }
@@ -185,11 +193,8 @@ header nav ul li a:hover{
     display: none;
   }
 
-   
-
   #useful .sticky-top{
-    top:75px;
-    
+    top:75px;  
     }
 }
 
@@ -207,6 +212,36 @@ header nav ul li a:hover{
 
 .list-group ul{
   border: none;
+}
+
+.box {
+  /*display: flex;
+  /*align-items: stretch;*/
+  /*justify-content: center;*/
+  /*flex-direction: column;*/
+}
+
+
+#access .fa-bus{
+  background-color: gray;
+  border-radius: 35px;
+  color: white;
+  height: 70px;
+  width: 70px;
+  padding-left: 12px;
+  padding-top: 12px;
+  font-size: 45px;
+}
+
+#access .fa-train{
+  background-color: gray;
+  border-radius: 35px;
+  color: white;
+  height: 70px;
+  width: 70px;
+  padding-left: 15px;
+  padding-top: 12px;
+  font-size: 45px;
 }
 
 #access .list-group-item{
@@ -241,7 +276,7 @@ header nav ul li a:hover{
   background-color: red;
   color: white;
   height: 25px;
-  width: 25px;
+  min-width: 25px;
   text-align:center;
 }
 
@@ -249,6 +284,28 @@ header nav ul li a:hover{
   background-color: blue;
   color: white;
   height: 25px;
-  width: 25px;
+  min-width: 25px;
   text-align:center;
+}
+
+.tram h3{
+  margin-top:12px;
+}
+
+/* QUARTIER LIBRE SECTION */
+
+#quartier-libre hr{
+    border-top:1px solid rgba(0,0,0,.5)
+}
+
+#quartier-libre img{
+    max-width:272px;
+    border:3px solid #fff;
+    border-radius:150px;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+#quartier-libre a:hover{
+    color:#fff;
+    text-decoration: none;
 }
