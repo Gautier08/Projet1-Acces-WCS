@@ -30,47 +30,28 @@
   <link rel="stylesheet" href="styles.css">
 
   <!-- FAVICON -->
-  <link rel="shortcut icon" href="images/logowcs.png" type="image/x-icon">
+  <link rel="shortcut icon" href="images/logo_orange_pastille.png" type="image/x-icon">
   <title>Accès à la Wild Code School</title>
 </head>
 
 <body  data-target="#main-nav" data-spy="scroll">
   <header>
-<<<<<<< HEAD
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <ul class="mr-auto navbar-nav justify-content-end my-auto w-100">
-        <li class="nav-item">
-          <a class="nav-link w-100 px-1" href="#home"><img src="images/logowcs.png" alt="Logo Wild Code School"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link w-100 px-1" href="#access"><i class="fas fa-map-marked-alt"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link w-100 px-1" href="#quartier-libre"><img class="opacity-grey" src="images/logo-quartierlibre.png"
-              alt="logo accès" /></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link w-100 px-1" href="#useful"><i class="fas fa-utensils"></i></a>
-        </li>
-      </ul>
-=======
     <nav id="main-nav" class="navbar navbar-expand-lg fixed-top">
         <ul class="mr-auto navbar-nav justify-content-end my-auto w-100">
             <li class="nav-item">
-              <a class="nav-link w-100 px-1" href="#home"><img src="images/logowcs.png" alt="Logo Wild Code School"></a>
+              <a class="nav-link w-100 px-1" href="#home"><img src="images/logo_orange_pastille.png" alt="Logo Wild Code School"></a>
             </li> 
             <li class="nav-item">
               <a class="nav-link w-100 px-1" href="#access"><i class="fas fa-map-marked-alt"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link w-100 px-1" href="#quartier-libre"><img class="opacity-grey" src="images/logo-quartierlibre.png"
+              <a class="nav-link w-100 px-1" href="#quartier-libre"><img src="images/logo-quartierlibre-active.png"
                   alt="logo accès" /></a>
             </li>
             <li class="nav-item">
               <a class="nav-link w-100 px-1" href="#useful"><i class="fas fa-utensils"></i></a>
             </li>
           </ul>
->>>>>>> 57de5124048d1c785ad5cb31e7a31eb2c73cd112
     </nav>
   </header>
 
@@ -79,20 +60,6 @@
     <section id="home" class="row">
       <div class="background-white py-5">
         <div class="jumbotron col-12 col-md-10 offset-md-1 px-5 bg-transparent">
-<<<<<<< HEAD
-          <h1 class="text-right">Nous rendre visite !</h1>
-          <p>Que vous soyez un intervenant (Wild Speaker), un futur étudiant ou simplement en quête d'informations, au
-            travers de cette page vous obtiendrez toutes les informations qui pourront vous être utile lors de votre
-            venue à la Wild Code School.</p>
-
-          <h2>Vous voulez participer à un Wild Breakfast ?</h2>
-
-          <p>Ce sont des petits-déjeuners gratuits d’information.
-            Ils sont organisés dans tous les campus Wild Code School.
-            Vous pourrez rencontrer l’équipe et les élèves et échanger autour de ton projet de formation. La
-            participation à l’un des Wild Breakfast est indispensable pour une candidature à notre formation
-            développeur web ou mobile.
-=======
             <h1 class="text-right">Venez à la Wild Code School !</h1>
             <p>Que vous soyez un intervenant (Wild Speaker), un futur étudiant ou simplement en quête d'informations, au travers de cette page vous obtiendrez toutes les informations qui pourront vous être utiles lors de votre venue à la Wild Code School.</p>
     
@@ -101,7 +68,6 @@
               <p>Ce sont des petits-déjeuners gratuits d’information.
               Ils sont organisés dans tous les campus Wild Code School.
               Vous pourrez rencontrer l’équipe et les élèves et échanger autour de votre projet de formation. La participation à l’un des Wild Breakfast est indispensable pour une candidature à notre formation développeur web ou mobile.
->>>>>>> 57de5124048d1c785ad5cb31e7a31eb2c73cd112
           </p>
           <a class="btn bg-orange shadow-lg btn-lg float-right" target="_blank" href="http://wildcodeschool-2902314.hs-sites.com/wild-breakfast?__hstc=83542985.cd087d4471f4dcea096ae74d7fbabf4d.1536153181958.1536679825651.1536743674478.4&__hssc=83542985.1.1536743674478&__hsfp=2520156938"
             role="button">PARTICIPER À UN <span class="split-md font-weight-bold">WILD BREAKFAST</span></a>
@@ -218,7 +184,7 @@
        
           <ul class="col-12 col-md-6 nav justify-content-center justify-content-md-start d-flex align-items-center">
 
-            <li class="d-flex nav-item text-white"><i class="fas fa-phone"></i>+33 6 58 30 24 94</li>
+            <li class="d-flex nav-item text-white"><i class="fas fa-phone pt-1"></i>+33 6 58 30 24 94</li>
             <li class="d-flex nav-item">
               <a class="nav-link text-white" target="_blank" href="https://www.facebook.com/wildcodeschool/"><i class="fab fa-facebook-square fa-lg"></i></a>
             </li>
@@ -246,76 +212,6 @@
     crossorigin="anonymous"></script>
   <script>
     let anchorlinks = document.querySelectorAll('a[href^="#"]')
-<<<<<<< HEAD
-
-    for (let item of anchorlinks) { // relitere 
-      item.addEventListener('click', (e) => {
-        let hashval = item.getAttribute('href')
-        let target = document.querySelector(hashval)
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        })
-        history.pushState(null, null, hashval)
-        e.preventDefault()
-      })
-    }
-    $(document).ready(function () {
-
-
-      const data = {
-        hotel: [
-          {
-            name: "Ibis Centre",
-            id: "ibis",
-            adress: "28 Boulevard Joffre, 51100 Reims",
-            phone: "03 26 40 03 24",
-            price: "€€€",
-            schedule: ["Toujours ouvert"],
-            img: "images/ibis.jpg",
-            facebook: "https://www.facebook.com/ibisReimsCentreGare/",
-            website: "https://www.accorhotels.com/fr/hotel-1422-ibis-reims-centre/index.shtml"
-          },
-          {
-            name: "B&B",
-            id: "bandb",
-            adress: "4 Rue André Pingat, 51100 Reims",
-            phone: "0 892 70 52 20",
-            price: "€€",
-            schedule: ["Toujours ouvert"],
-            img: "images/bandb.jpg",
-            website: "http://www.hotel-bb.com/en/hotels/reims-centre-gare.htm"
-          },
-          {
-            name: "Residhome",
-            id: "residhome",
-            adress: "6 Rue de Courcelles, 51100 Reims",
-            phone: "03 26 78 17 81",
-            price: "€€",
-            schedule: ["Toujours ouvert"],
-            img: "images/residhome.jpg",
-            website: "https://www.residhome.com/residence-hoteliere-aparthotel-reims-233.html"
-          },
-          {
-            name: "Grand Hotel Continental",
-            id: "continental",
-            adress: "1 Boulevard du Général Leclerc, 51100 Reims",
-            phone: "03 26 40 39 35",
-            price: "€€€€",
-            schedule: ["Toujours ouvert"],
-            img: "images/continental.jpg",
-            website: "http://www.grandhotelcontinental.com/fr/index.php#reims-et-la-champagne.php"
-          },
-          {
-            name: "Holiday Inn",
-            id: "holidayinn",
-            adress: "46 Rue Buirette, 51100 51100 Reims",
-            phone: "03 26 78 99 99",
-            price: "€€€€",
-            schedule: ["Toujours ouvert"],
-            img: "images/holidayinn.jpg",
-            website: "https://www.ihg.com/holidayinn/hotels/us/en/reims/rhegc/hoteldetail?cm_mmc=GoogleMaps-_-HI-_-FR-_-RHEGC"
-=======
  
  for (let item of anchorlinks) { // relitere 
      item.addEventListener('click', (e)=> {
@@ -503,11 +399,7 @@
                 website: "http://www.pharmacie-derlon.fr",
                 img: "images/erlon.jpg",
               }
-            ]
->>>>>>> 57de5124048d1c785ad5cb31e7a31eb2c73cd112
-          }
-
-        ],
+            ],
         restaurant: [
           {
             name: "Burger King",
@@ -675,7 +567,6 @@
           let separator1 = document.createElement("hr");
           popoverContent.appendChild(separator1);
 
-<<<<<<< HEAD
           //Create Phone
           if (Object.values(data)[k][i].phone) {
             let phone = document.createElement('h5');
@@ -689,10 +580,7 @@
             let separator2 = document.createElement("hr");
             popoverContent.appendChild(separator2);
           }
-=======
-          $('body').scrollspy({ target: '#main-nav' })
 
->>>>>>> 57de5124048d1c785ad5cb31e7a31eb2c73cd112
 
           //Create Price
           if (Object.values(data)[k][i].price) {
@@ -800,6 +688,7 @@
       })
 
 
+      $('body').scrollspy({ target: '#main-nav' })
 
 
     });
