@@ -1,3 +1,7 @@
+body{
+  position:relative;
+}
+
 p, a, li, ul, span, h1, h2, h3, h4, h5{
     font-family: 'Montserrat', sans-serif;
     color: #212121;
@@ -44,6 +48,10 @@ header nav ul li a:hover i, header nav ul li a:hover img{
 
 header nav ul li a:hover{
   color: inherit;
+}
+
+header nav a.active{
+  color:#f7a758;
 }
 
 .opacity-grey{

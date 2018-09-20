@@ -31,9 +31,9 @@
   <title>Accès à la Wild Code School</title>
 </head>
 
-<body>
+<body  data-target="#main-nav" data-spy="scroll">
   <header>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav id="main-nav" class="navbar navbar-expand-lg fixed-top">
         <ul class="mr-auto navbar-nav justify-content-end my-auto w-100">
             <li class="nav-item">
               <a class="nav-link w-100 px-1" href="#home"><img src="images/logowcs.png" alt="Logo Wild Code School"></a>
@@ -557,6 +557,8 @@
             $btns.removeClass('active');
             $(this).addClass('active');
           })
+
+          $('body').scrollspy({ target: '#main-nav' })
 
 
 
