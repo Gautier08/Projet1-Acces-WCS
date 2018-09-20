@@ -104,7 +104,7 @@ header nav ul li a:hover{
   }
 
   #useful .card img{
-    transition:transform 0.2s;
+    transition:transform 0.4s;
 }
 
   #useful .card:hover img{
@@ -155,13 +155,18 @@ header nav ul li a:hover{
 
 /*   MEDIA QUERY  */
 
-@media (max-width: 576px) { 
-    #useful img{
-      height:40vw;
-    }
+@media (min-width:768px) and (max-width:1199px) { 
+  #useful img{
+    height:20vw;
+  }
+
 }
 
 @media (max-width: 767.98px) {
+  #useful img{
+    height:35vw;
+  }
+
   header nav{
     width : 100%;
     height: 75px;
@@ -214,8 +219,8 @@ header nav ul li a:hover{
   border: none;
 }
 
-#access .fa-bus{
-  background-color: gray;
+#access .fa-bus, #access .fa-train{
+  background-color: #eaeaea;
   border-radius: 35px;
   color: white;
   height: 70px;
@@ -226,14 +231,7 @@ header nav ul li a:hover{
 }
 
 #access .fa-train{
-  background-color: gray;
-  border-radius: 35px;
-  color: white;
-  height: 70px;
-  width: 70px;
   padding-left: 15px;
-  padding-top: 12px;
-  font-size: 45px;
 }
 
 #access .list-group-item{
@@ -287,17 +285,26 @@ header nav ul li a:hover{
 /* QUARTIER LIBRE SECTION */
 
 #quartier-libre hr{
-    border-top:1px solid rgba(0,0,0,.5)
+    border-top:1px solid rgba(255,255,255,.5)
+}
+
+#quartier-libre h1, #quartier-libre p{
+  color : #FFF;
 }
 
 #quartier-libre img{
     max-width:272px;
     border:3px solid #fff;
     border-radius:150px;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;    
+}
+
+#quartier-libre a{
+  transition: all 0.5s;
+    color:#fff;
 }
 
 #quartier-libre a:hover{
-    color:#fff;
+  color :#212121;
     text-decoration: none;
 }
