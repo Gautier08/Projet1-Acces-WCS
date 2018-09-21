@@ -89,10 +89,10 @@ header nav a.active i, header nav a.active img{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-#home a.btn, #home a.btn span, #access a.btn{ 
+#home a.btn, #home a.btn span, #access a.btn, #access a.btn span{ 
   transition: all 0.5s;
 }
-#home a.btn:hover, #home a.btn:hover span, #access a.btn:hover{
+#home a.btn:hover, #home a.btn:hover span, #access a.btn:hover, #access a.btn:hover span{
   color : #FFF;
   background-color: #efb247
 }
@@ -217,6 +217,12 @@ header nav a.active i, header nav a.active img{
     #useful .moreInfos{
         font-size:1rem;
     }
+}
+
+@media (max-width: 525px) {
+  #useful .filter{
+    font-size:0.8rem;
+  }
 }
 
 /* TRANSPORTS SECTION */
